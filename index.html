@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HotMic for Mac — your AirPods stem press, in Google Meet's own mute button</title>
+<meta name="description" content="Press your AirPods stem and Google Meet's own mute button flips. HotMic makes the gesture work in every app that never adopted Apple's mute API.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">HotMic<span class="dot">.</span></a>
+    <nav aria-label="Site">
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="wrap">
+    <h1>Press your AirPods stem and Google Meet's own mute button flips.</h1>
+    <p class="sub">HotMic makes the gesture work in every app that never adopted Apple's mute API.</p>
+    <div class="cta-row">
+      <!-- TODO: replace href with the GitHub Releases download URL (dmg) before launch -->
+      <a class="btn" href="#" aria-describedby="dl-note">Download HotMic for Mac</a>
+      <a class="btn quiet" href="#pricing">See pricing</a>
+    </div>
+    <p class="cta-note" id="dl-note">Free for 14 days, full features, no card. Device-level mute stays free forever.</p>
+  </div>
+</section>
+
+<div class="demo-band" aria-label="Demo">
+  <div class="wrap">
+    <figure class="demo">
+      <div class="demo-stage" aria-hidden="true">
+        <div class="stem">
+          <div class="bud"></div>
+          <div class="shaft"></div>
+          <div class="press"></div>
+        </div>
+        <div class="wire"></div>
+        <div class="pillbox">
+          <div class="pill">
+            <span class="live">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round">
+                <rect x="9" y="3" width="6" height="11" rx="3" fill="#ffffff" stroke="none"/>
+                <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/>
+                <line x1="12" y1="18" x2="12" y2="21"/>
+              </svg>
+            </span>
+            <span class="muted">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round">
+                <rect x="9" y="3" width="6" height="11" rx="3" fill="#ffffff" stroke="none"/>
+                <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/>
+                <line x1="12" y1="18" x2="12" y2="21"/>
+                <line x1="4" y1="2.5" x2="20" y2="20.5" stroke-width="2.4"/>
+              </svg>
+            </span>
+          </div>
+          <div class="pill-state">
+            <span class="s-live">You're live</span>
+            <span class="s-muted">Muted in Meet</span>
+          </div>
+        </div>
+      </div>
+      <figcaption>One squeeze on the stem. The button that flips is Google Meet's — not an overlay, not a hardware trick.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section id="wedge">
+  <div class="wrap">
+    <div class="prose">
+      <h2>Mute apps that lie to you are worse than no mute app.</h2>
+      <p>Every AirPods mute utility advertises the stem press. Almost all of them mute at the device level: your peers stop hearing you, but the meeting app has no idea. Google Meet keeps showing you as live while you say nothing, and its own mute button now disagrees with reality — two switches, each unaware of the other. That mismatch is exactly how hot-mic moments happen.</p>
+      <p>HotMic flips the meeting app's own control instead. There is one mute state, and you, Meet, and everyone on the call see the same one.</p>
+    </div>
+    <table class="truth">
+      <caption>You press the stem to mute. What happens next:</caption>
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">What peers hear</th>
+          <th scope="col">What Meet shows</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Device-level muters</td>
+          <td>Silence</td>
+          <td class="bad">"You're live" — wrong</td>
+        </tr>
+        <tr>
+          <td>HotMic</td>
+          <td>Silence</td>
+          <td class="good">Muted — in sync</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="prose">
+      <h2>How it works</h2>
+      <p>Apple only delivers the AirPods stem-press to a process the system believes is handling a call's audio. HotMic runs exactly that kind of audio unit — but every sample it receives is rendered and immediately discarded, and it only runs while another app is already using your microphone. Outside meetings it is dormant, so it never drags your AirPods into low-quality phone-call audio.</p>
+      <p>Once HotMic has the gesture, it mutes through the best route available:</p>
+    </div>
+    <ul class="routes">
+      <li class="primary"><strong>In-app sync</strong> — a small browser extension flips the meeting tab's own mute button, and changes made in the tab sync back. Google Meet is verified; Microsoft Teams support is in place.</li>
+      <li class="primary"><strong>Virtual headset</strong> — HotMic can present itself as a call-control headset (the same mechanism a Jabra or Poly headset uses), so apps that speak that protocol flip their own mute UI. This route runs on an Apple-approval-gated system capability granted to HotMic.</li>
+      <li><strong>Device fallback</strong> — everywhere else, HotMic mutes the microphone itself. Works with any app; this is the honest last resort, and the menu bar tells you which route you're on.</li>
+    </ul>
+    <div class="prose">
+      <p>Apps with native stem-press support, like FaceTime and recent Zoom, are left alone — HotMic stays out of the way so the built-in gesture keeps working. A global hotkey and an on-screen mute indicator round it out, and the indicator never appears in your screen shares.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="trust-band" id="privacy">
+  <div class="wrap">
+    <h2>Privacy</h2>
+    <p class="lead">Your audio is rendered and discarded on your Mac. No audio ever leaves your device.</p>
+    <ul>
+      <li>Nothing is recorded, stored, or transmitted. The audio unit exists only so macOS will deliver the mute gesture; the samples go nowhere.</li>
+      <li>The one network request the app makes is an update check, which sends your IP address and app version to the update server — we say this because "no network at all" would be a lie, and we don't do those.</li>
+      <li>No analytics, no cookies, no trackers — in the app or on this site.</li>
+      <li>The app is sandboxed, and the virtual-headset capability it uses is individually reviewed and granted by Apple.</li>
+    </ul>
+    <p>The full policy is short and readable: <a href="privacy.html">Privacy policy</a>.</p>
+  </div>
+</div>
+
+<section id="pricing">
+  <div class="wrap">
+    <div class="prose">
+      <h2>One price, yours forever.</h2>
+      <p>Every download starts a 14-day trial of everything, no card. When it ends, HotMic keeps working for free with device-level mute and the hotkey; a license unlocks the synced routes. No subscription — you buy it once.</p>
+    </div>
+    <!-- Buy buttons are placeholders: Paddle.js checkout wiring comes later.
+         The data-paddle-price-id attributes below carry the LIVE Paddle price IDs. -->
+    <table class="price-table">
+      <thead>
+        <tr>
+          <th scope="col">License</th>
+          <th scope="col"></th>
+          <th scope="col">Price</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="tier">Personal</td>
+          <td class="who">One person, all the Macs they own.</td>
+          <td class="amount">$19 <small>one-time</small></td>
+          <td class="buy"><a class="btn" href="#" data-paddle-price-id="pri_01m32qxtfpzraze0hqzb26wvke">Buy Personal</a></td>
+        </tr>
+        <tr>
+          <td class="tier">Team 5-pack</td>
+          <td class="who">Five seats on one key, with an invoice your finance team will accept.</td>
+          <td class="amount">$49 <small>one-time</small></td>
+          <td class="buy"><a class="btn" href="#" data-paddle-price-id="pri_01m32qxtnr5wmz0vpy3ga212ef">Buy 5-pack</a></td>
+        </tr>
+        <tr>
+          <td class="tier">Team 20 seats</td>
+          <td class="who">Twenty seats on one key.</td>
+          <td class="amount">$199 <small>one-time</small></td>
+          <td class="buy"><a class="btn" href="#" data-paddle-price-id="pri_01m32qxtwzv6b7e3d7evcg1w05">Buy 20 seats</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="fine">Purchases are handled by Paddle as merchant of record — they take care of VAT and invoices worldwide. Licenses are perpetual for the versions they cover.</p>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <div class="prose">
+      <h2>Get HotMic</h2>
+      <p>Requires macOS and AirPods (or the global hotkey, which works with any microphone). In-app Meet sync uses a companion extension for Chrome-family browsers.</p>
+      <div class="cta-row">
+        <!-- TODO: replace href with the GitHub Releases download URL (dmg) before launch -->
+        <a class="btn" href="#">Download HotMic for Mac</a>
+      </div>
+      <p class="cta-note">14-day full trial starts on first launch. No account, no card, no sign-up.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <nav aria-label="Legal">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="eula.html">License agreement</a>
+    </nav>
+    <p>HotMic for Mac is not affiliated with, endorsed by, or sponsored by Apple Inc., Google LLC, or Microsoft Corporation. AirPods and macOS are trademarks of Apple Inc.; Google Meet is a trademark of Google LLC; Microsoft Teams is a trademark of Microsoft Corporation.</p>
+    <p>&copy; 2026 HotMic for Mac</p>
+  </div>
+</footer>
+
+</body>
+</html>
