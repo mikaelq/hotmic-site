@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HotMic — Privacy policy</title>
+<title>HotMic privacy policy</title>
 <meta name="description" content="HotMic's privacy policy: audio is rendered and discarded locally, never recorded, stored, or transmitted. No analytics, no cookies.">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -13,7 +13,7 @@
 <meta name="theme-color" content="#f3f5f7">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HotMic">
-<meta property="og:title" content="HotMic — Privacy policy">
+<meta property="og:title" content="HotMic privacy policy">
 <meta property="og:description" content="HotMic's privacy policy: audio is rendered and discarded locally, never recorded, stored, or transmitted. No analytics, no cookies.">
 <meta property="og:url" content="https://usehotmic.com/privacy.html">
 <meta property="og:image" content="https://usehotmic.com/assets/og-image.png">
@@ -21,7 +21,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The HotMic app icon and wordmark">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HotMic — Privacy policy">
+<meta name="twitter:title" content="HotMic privacy policy">
 <meta name="twitter:description" content="HotMic's privacy policy: audio is rendered and discarded locally, never recorded, stored, or transmitted. No analytics, no cookies.">
 <meta name="twitter:image" content="https://usehotmic.com/assets/og-image.png">
 <meta name="twitter:image:alt" content="The HotMic app icon and wordmark">
@@ -62,7 +62,7 @@
       microphone, which is how it tells you're in a meeting, and while the
       practice screen in its setup is open. To know, it asks macOS which apps
       are using the microphone; it never hears their audio. By default it
-      stays out of the way of Zoom, FaceTime and the Teams app, which handle
+      stays out of the way of Zoom, FaceTime and the Microsoft Teams Mac app, which handle
       the gesture themselves. The rest of the time the audio unit isn't
       running.</p>
 
@@ -79,7 +79,9 @@
         stops working during a call.</li>
         <li><strong>Automation for Music and Spotify</strong> (optional), only
         if you turn on "Pause music during meetings" (see below).</li>
-        <li><strong>Open at login</strong> (optional), if you choose it.</li>
+        <li><strong>Open at login</strong> (optional). Setup checks this box by
+        default; uncheck it if you don't want HotMic to open when you log
+        in.</li>
       </ul>
       <p>HotMic doesn't ask for Input Monitoring, Screen Recording, Camera or
       Location.</p>
@@ -143,27 +145,37 @@
       Check for Updates. Like any web request, a check sends your IP
       address, along with the app version, so the server can answer "is
       there something newer?". If you install an update, HotMic downloads it
-      from the update server. That is the app's only network activity. Links
+      from the update server. That is the app's only network activity. This website, the update server and the HotMic
+      download are hosted by GitHub (GitHub Pages and GitHub Releases), so
+      GitHub receives your IP address when you visit, check for updates or
+      download, and handles it under
+      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub's privacy statement</a>.
+      Links
       you click in HotMic open in your browser. License activation is
       verified locally on your Mac.</p>
 
       <h2>Purchases</h2>
       <p>Purchases are processed by Paddle as merchant of record. When you buy
-      a license, Paddle — not us — collects and processes your payment details
+      a license, Paddle (not us) collects and processes your payment details
       under
       <a href="https://www.paddle.com/legal/privacy" rel="noopener">Paddle's privacy policy</a>.
-      We receive from Paddle what is needed to issue your license key, such as
-      your email address and what you bought. A small service we run on
-      Cloudflare creates the key, and Resend, our email provider, emails it
-      to you; both receive your email address only to create and deliver your
-      key. If the email fails to send, your address is written to that
-      service's error log so we can resend it. Your license key contains your email address. When you enter it in
+      Paddle shares with us a record of each purchase: your email address,
+      your country, what you bought and what you paid, and any name, address
+      or business details you entered at checkout. We use it to issue your
+      key, to help you if you contact support, and for our accounting
+      records. A small service we run on Cloudflare receives that record from
+      Paddle and creates your key. Resend, our email provider, receives your
+      email address and your key so it can email the key to you. If the email
+      fails to send, your address is written to that service's error log so
+      we can resend it. Your license key contains your email address. On a
+      team license, that is the buyer's email address, and anyone who has the
+      key can read it. When you enter it in
       HotMic, it is stored and checked on your Mac.</p>
 
       <h2>No analytics, anywhere</h2>
       <p>The app contains no analytics, telemetry, or crash reporting that
-      phones home. This website sets no cookies, runs no analytics, and loads
-      nothing from third-party servers.</p>
+      phones home. This website is hosted on GitHub Pages. It sets no cookies,
+      runs no analytics, and loads nothing from other servers.</p>
       <p>HotMic keeps a short list of setup steps on your Mac to help with
       support, and never sends it anywhere. If you use Copy details or Send
       details, the text goes only where you paste or send it, and it
@@ -185,6 +197,7 @@
     <nav aria-label="Legal">
       <a href="privacy.html" aria-current="page">Privacy policy</a>
       <a href="eula.html">License agreement</a>
+      <a href="google-meet-airpods.html">AirPods in Google Meet</a>
     </nav>
     <p>HotMic for Mac is not affiliated with, endorsed by, or sponsored by Apple, Google, Microsoft, Spotify, Zoom, or any headset maker. AirPods, Apple Music, FaceTime and macOS are trademarks of Apple Inc.; Google Meet and Chrome are trademarks of Google LLC; Microsoft Teams is a trademark of Microsoft Corporation; Spotify is a trademark of Spotify AB. Other names are trademarks of their respective owners.</p>
     <p>&copy; 2026 Duck Duck Grey Duck LLC</p>

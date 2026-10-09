@@ -1,16 +1,16 @@
 # HotMic marketing site
 
-Static one-pager for HotMic for Mac (`index.html`, `privacy.html`,
-`eula.html`). Plain HTML/CSS, no build step, no external origins — it works
-opened straight from `file://` and hosted on GitHub Pages.
+Static site for HotMic for Mac (`index.html`, `privacy.html`, `eula.html`,
+`google-meet-airpods.html`). Plain HTML/CSS, no build step, no external
+origins. It works opened straight from `file://` and hosted on GitHub Pages.
 
 > ## Domain: registered, not serving yet
 >
 > `CNAME` in this repo points at **usehotmic.com**. The domain is registered
 > (Amazon Registrar, hosted zone in Route 53) but is **not serving yet**: the
 > GitHub Pages DNS records below still have to be added. The domain is also
-> the Sparkle `SUFeedURL` host baked into every shipped build, so don't
-> change it.
+> the planned Sparkle `SUFeedURL` host (see "Where the appcast will live").
+> Once a build ships with it, don't change it.
 
 ## Publishing
 
@@ -22,14 +22,14 @@ account requires that). Pages deploys `main` from the repo root.
 1. `usehotmic.com` is already registered (Amazon Registrar / Route 53).
    Optionally register `hotmicformac.com` as a redirect.
 2. Pushed; Pages deploys from `main`, root (done).
-4. In the Route 53 hosted zone for `usehotmic.com`, add four A records for
+3. In the Route 53 hosted zone for `usehotmic.com`, add four A records for
    the apex:
    - `185.199.108.153`
    - `185.199.109.153`
    - `185.199.110.153`
    - `185.199.111.153`
-5. Add a `CNAME` DNS record for `www` pointing to `mikaelq.github.io`.
-6. Back in Settings → Pages, confirm the custom domain shows `usehotmic.com`
+4. Add a `CNAME` DNS record for `www` pointing to `mikaelq.github.io`.
+5. Back in Settings → Pages, confirm the custom domain shows `usehotmic.com`
    (the `CNAME` file in this repo pre-fills it) and, once the DNS check
    passes, tick **Enforce HTTPS**.
 
@@ -55,10 +55,10 @@ Duck LLC logo:
 The Sparkle update feed and release archives will be served from this same
 Pages site, under `appcast/`:
 
-- `https://usehotmic.com/appcast/appcast.xml` — this is the `SUFeedURL` to
+- `https://usehotmic.com/appcast/appcast.xml`: this is the `SUFeedURL` to
   set in the product repo's `project.yml` (it is baked into every shipped
   build; changing it later means serving the old URL forever).
-- `https://usehotmic.com/appcast/HotMic-<version>.zip` — the update archives
+- `https://usehotmic.com/appcast/HotMic-<version>.zip`: the update archives
   referenced by the appcast (`Scripts/release.sh` in the product repo emits
   `dist/appcast.xml` + zips; copy them into `appcast/` here).
 

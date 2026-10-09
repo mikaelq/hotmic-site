@@ -1,4 +1,4 @@
-/* HotMic site — "Two switches, one truth."
+/* HotMic site: "Two switches, one truth."
    Self-contained: system fonts only, zero JS, zero external origins. */
 
 :root {
@@ -98,7 +98,7 @@ section, .trust-band { scroll-margin-top: 92px; }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(243, 245, 247, 0.82);
+  background: rgba(243, 245, 247, 0.94);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--line);
@@ -312,7 +312,7 @@ section, .trust-band { scroll-margin-top: 92px; }
   gap: 12px;
 }
 
-/* the two agreement dots — one truth on both sides.
+/* the two agreement dots: one truth on both sides.
    The container breathes gently during the long holds. */
 .sync-dot {
   position: relative;
@@ -338,8 +338,8 @@ section, .trust-band { scroll-margin-top: 92px; }
   animation: to-muted var(--cycle) linear infinite;
 }
 /* the pod-side dot flips at the SQUEEZE (the AirPods know first); the Meet-side
-   dot keeps the shared to-live/to-muted timing and flips only when the pill lands —
-   truth propagates left to right. */
+   dot keeps the shared to-live/to-muted timing and flips only when the pill lands,
+   so truth propagates left to right. */
 .pod-panel .sync-dot .d-live {
   background: var(--live);
   box-shadow: 0 0 8px rgba(14, 143, 82, 0.5);
@@ -387,7 +387,7 @@ section, .trust-band { scroll-margin-top: 92px; }
 }
 
 /* pinch pads: two soft fingertips that slide in, rest on the stem, and press.
-   The long rest (2.2%-8.5%) is the anticipation beat — it also makes frame 1
+   The long rest (2.2%-8.5%) is the anticipation beat. It also makes frame 1
    of any capture a stable image regardless of headless startup jitter. */
 .pad {
   opacity: 0;
@@ -508,7 +508,7 @@ section, .trust-band { scroll-margin-top: 92px; }
     node-led var(--cycle) linear infinite,
     led-breathe var(--cycle) ease-in-out infinite;
 }
-/* the reaction ring that bursts as the pulse passes through — big enough to
+/* the reaction ring that bursts as the pulse passes through, big enough to
    carry the absorb/re-emit beat at a glance */
 .bridge-node::before {
   content: "";
@@ -590,7 +590,7 @@ section, .trust-band { scroll-margin-top: 92px; }
   border-radius: 5px;
 }
 
-/* while live, the corner shows a dancing audio indicator — the tile is alive */
+/* while live, the corner shows a dancing audio indicator, so the tile looks alive */
 .speak-badge {
   position: absolute;
   top: 9px;
@@ -717,6 +717,26 @@ section, .trust-band { scroll-margin-top: 92px; }
 }
 .mbtn svg { width: 25px; height: 25px; }
 
+/* pause control (WCAG 2.2.2): a visually hidden checkbox plus its label */
+#demo-pause:checked ~ .demo-stage *,
+#demo-pause:checked ~ .demo-stage *::before,
+#demo-pause:checked ~ .demo-stage *::after {
+  animation-play-state: paused;
+}
+.demo-pause {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--fog);
+  text-decoration: underline;
+  cursor: pointer;
+}
+#demo-pause:focus-visible + .demo-pause {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
 .demo figcaption {
   color: var(--fog);
   font-size: 0.98rem;
@@ -733,10 +753,10 @@ section, .trust-band { scroll-margin-top: 92px; }
               jitter, which can run the clock a few hundred ms ahead.)
    9.1-12.7   SQUEEZE: stem spring-compresses to 0.86 on a wide plateau, red
               press flash on the touch strip + shockwave ring; "Squeeze" chip;
-              the POD-side dot flips red at 9.9 — the AirPods know first
+              the POD-side dot flips red at 9.9 (the AirPods know first)
    12.6-18.4  red pulse travels the wire and passes THROUGH the HotMic node at
               ~15.5: node punches to 1.45x, big burst ring, LED flashes WHITE
-              (15.35-15.95) then adopts red — absorb, hand over, re-emit
+              (15.35-15.95) then adopts red: absorb, hand over, re-emit
    20.2-23.5  Meet flips to muted: pill dips (anticipation) then snaps with
               overshoot; corner badge pops; MEET-side dot flips; toast slides
               in (23-24.5). Truth propagates pod -> node -> Meet, in order.
@@ -871,8 +891,8 @@ section, .trust-band { scroll-margin-top: 92px; }
   52.5%, 100%  { opacity: 0; transform: translateY(5px); visibility: hidden; }
 }
 
-/* pulse travels: dash slides along the path (pathLength=100); its midpoint —
-   the node crossing — lands on the 15.625% / 53.125% grid frames */
+/* pulse travels: dash slides along the path (pathLength=100); its midpoint
+   (the node crossing) lands on the 15.625% / 53.125% grid frames */
 @keyframes sig-a {
   0%, 12.6%    { stroke-dashoffset: 20; opacity: 0; visibility: hidden; }
   13.1%        { opacity: 1; visibility: visible; }
@@ -929,7 +949,7 @@ section, .trust-band { scroll-margin-top: 92px; }
   53.75%, 100%   { background-color: #3dcc85; box-shadow: 0 0 10px 1px rgba(61, 204, 133, 0.8); }
 }
 
-/* the pill's brand dot mirrors the node LED — it never contradicts the state */
+/* the pill's brand dot mirrors the node LED and never contradicts the state */
 @keyframes pill-dot {
   0%, 15.4%     { background-color: #3dcc85; box-shadow: 0 0 6px rgba(61, 204, 133, 0.8); }
   15.65%, 52.9% { background-color: #f0564c; box-shadow: 0 0 6px rgba(240, 86, 76, 0.8); }
@@ -966,7 +986,7 @@ section, .trust-band { scroll-margin-top: 92px; }
   100%         { opacity: 1; transform: scale(1); visibility: visible; }
 }
 
-/* pod-side dot: flips at the squeeze itself — the AirPods side knows first */
+/* pod-side dot: flips at the squeeze itself, because the AirPods side knows first */
 @keyframes pod-to-muted {
   0%, 8.3%     { opacity: 0; transform: scale(0.55); visibility: hidden; }
   8.9%, 9.9%   { opacity: 1; transform: scale(1.15); visibility: visible; }
@@ -993,7 +1013,7 @@ section, .trust-band { scroll-margin-top: 92px; }
   58.85%, 100%  { opacity: 0; transform: scale(0.3); visibility: hidden; }
 }
 
-/* the badge's glow pulses through the muted hold - the hold is alive */
+/* the badge's glow pulses through the muted hold, so the hold looks alive */
 @keyframes badge-glow {
   0%, 24.5%   { box-shadow: 0 0 8px 0 rgba(240, 86, 76, 0.3); }
   28.1%       { box-shadow: 0 0 22px 5px rgba(240, 86, 76, 0.9); }
@@ -1079,7 +1099,7 @@ section, .trust-band { scroll-margin-top: 92px; }
   .bridge-node, .bridge-node::before, .bridge-node::after {
     animation: none;
   }
-  /* one consistent static story: the stem is squeezed, and everything agrees — muted */
+  /* one consistent static story: the stem is squeezed, and everything agrees on muted */
   .pod-cam { transform: translateY(0) scale(1.02); }
   .stem-squeeze { transform: scaleX(0.93); }
   .pad { opacity: 0.95; visibility: visible; }
@@ -1110,6 +1130,7 @@ section, .trust-band { scroll-margin-top: 92px; }
   .toast.t-live { opacity: 0; visibility: hidden; }
   .speak-badge { opacity: 0; visibility: hidden; }
   .sync-dot { transform: none; }
+  #demo-pause, .demo-pause { display: none; }
 }
 
 /* ---------- sections ---------- */
@@ -1129,7 +1150,7 @@ section { padding: 84px 0 12px; }
   #wedge .wrap { grid-template-columns: 1fr; }
 }
 
-/* truth table — the sync motif, set in type */
+/* truth table: the sync motif, set in type */
 .truth {
   border-collapse: separate;
   border-spacing: 0;
@@ -1190,10 +1211,10 @@ section { padding: 84px 0 12px; }
   width: 1.3em;
   margin-left: -0.2em;
 }
-.truth .bad::before { content: "≠"; color: var(--red); }
-.truth .good::before { content: "="; color: var(--live); }
+.truth .bad::before { content: "≠"; content: "≠" / ""; color: var(--red); }
+.truth .good::before { content: "="; content: "=" / ""; color: var(--live); }
 
-/* how it works: the route ladder as cards — structure encodes the fallback order:
+/* how it works: the route ladder as cards. Their structure encodes the fallback order:
    two elevated primary routes, one flat honest fallback */
 .routes {
   padding-left: 0;
