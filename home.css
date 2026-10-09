@@ -3,7 +3,6 @@
   --paper: #f8f6f2;
   --line: #dedbd5;
   --soft: #62615e;
-  --cycle: 10s;
   background: var(--paper);
 }
 .mini:not(.guide) .site-head { background: rgba(248,246,242,.94); }
@@ -43,22 +42,10 @@
 .mini:not(.guide) section { padding-top: 100px; }
 .mini:not(.guide) .m-hero { padding-top: 76px; }
 .mini:not(.guide) h2 { font-size: clamp(2rem,3.5vw,3rem); }
-.mini .m-truth .lede { max-width: 42ch; font-size: 1.08rem; margin-top: 18px; }
-.mini .vs { margin-top: 32px; }
-.mini .vs-card { padding: 28px; box-shadow: none; }
-.mini .vs-card.is-bad { background: #efede8; border-style: solid; }
-.mini .vs-card.is-good { border-color: #9ab8a2; box-shadow: none; }
-.mini .tiles li { background: transparent; border-radius: 14px; }
-.mini .tiles p { font-size: .98rem; line-height: 1.6; }
 .setup-steps { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 36px; list-style: none; padding: 0; margin: 40px auto 0; text-align: left; max-width: 940px; }
 .setup-steps li { border-top: 1px solid var(--line); padding-top: 20px; }
 .step-number { display: block; font: italic 1.8rem var(--serif); color: var(--red-deep); margin-bottom: 16px; }
 .setup-steps p { color: var(--soft); font-size: .95rem; margin: 12px 0 0; }
-.mini .plans { max-width: 940px; margin-top: 36px; }
-.mini .plan { box-shadow: none; border-radius: 16px; padding: 30px 20px; }
-.mini .plan.is-main { border: 1px solid #ba796d; background: #fffaf6; box-shadow: none; }
-.mini .checkout-pending { background: transparent; border: 1px dashed #bcb6ae; color: var(--soft); box-shadow: none; font-size: .78rem; font-weight: 500; }
-.checkout-note { color: var(--soft); font-size: .86rem; margin: 0 auto 24px; text-wrap: balance; }
 .mini .trust-band { margin-top: 100px; padding: 72px 0; }
 .faq-list { max-width: 740px; margin: 36px auto 0; text-align: left; }
 .faq-list details { border-bottom: 1px solid var(--line); }
@@ -142,4 +129,28 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .press-demo .call-controls .call-mic, .press-demo .person-mute, .press-demo .press-toggle { transition: none; }
+}
+/* One product and one primary price; seat packs remain available on request. */
+.mini #pricing .lede { max-width: 46ch; }
+.purchase-card { display: grid; grid-template-columns: 1fr 1.25fr; gap: 36px; max-width: 740px; margin: 32px auto 20px; padding: 36px; border: 1px solid #c6b6a9; border-radius: 20px; background: #fffdf9; text-align: left; }
+.mini .purchase-card h3 { font: 600 .95rem var(--sans); margin: 0 0 18px; }
+.purchase-price .price { font: 600 4rem/1 var(--serif); letter-spacing: -.04em; margin: 0 0 16px; }
+.purchase-price .price span { font: 400 1rem var(--sans); letter-spacing: normal; color: var(--soft); }
+.purchase-price > p:last-child { margin: 0; font-size: .92rem; color: var(--soft); line-height: 1.7; }
+.purchase-includes { border-left: 1px solid var(--line); padding-left: 32px; }
+.purchase-includes ul { list-style: none; padding: 0; margin: 0; font-size: .9rem; }
+.purchase-includes li { position: relative; padding-left: 18px; margin: 0 0 10px; }
+.purchase-includes li::before { content: ''; position: absolute; left: 0; top: .6em; width: 6px; height: 6px; border-radius: 50%; background: var(--live); }
+.availability { color: var(--soft); font-size: .75rem; border-top: 1px solid var(--line); padding-top: 14px; margin: 20px 0 0; }
+.trial-end { max-width: 62ch; margin: 0 auto 20px; color: var(--soft); font-size: .9rem; text-wrap: balance; }
+.team-pricing { max-width: 440px; margin: 0 auto 24px; font-size: .9rem; }
+.team-pricing summary { cursor: pointer; padding: 12px; text-underline-offset: 4px; }
+.team-pricing summary:hover { text-decoration: underline; }
+.team-pricing p { color: var(--soft); margin: 12px 0; }
+.team-pricing ul { list-style: none; margin: 0; padding: 0 0 12px; }
+.team-pricing li { margin-top: 6px; }
+@media (max-width: 560px) {
+  .purchase-card { grid-template-columns: 1fr; gap: 24px; padding: 26px 24px; }
+  .purchase-includes { border-left: 0; border-top: 1px solid var(--line); padding: 24px 0 0; }
+  .purchase-price .price { font-size: 3.5rem; }
 }

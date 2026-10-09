@@ -71,9 +71,9 @@ Pages site, under `appcast/`:
 - Download CTAs currently state "Coming soon" and point to the homepage’s
   availability notice. Replace the final static download notice with a
   verified DMG link and update CTA copy when a public build is available.
-- The three pricing cards explicitly show "Checkout coming soon". Connect
-  Paddle.js checkout when ready; the live price IDs are retained as
-  `data-paddle-price-id`.
+- Pricing presents one $19 personal license with team seat packs in an
+  expandable section. Purchases remain unavailable; live Paddle price IDs
+  are retained as `data-paddle-price-id` for checkout wiring.
 - `eula.html` is a DRAFT (visible banner): `[DATE]` and the governing law /
   venue (`[JURISDICTION]`, `[VENUE]`, §11.1) are unfilled, attorney review
   pending. The Licensor is Duck Duck Grey Duck LLC.
@@ -106,3 +106,17 @@ controls for Studio Pro, Solo 4, Solo Buds, Studio Buds +, Fit Pro and
 Powerbeats Pro 2. The homepage FAQ links to Apple’s controls guide and
 separates that native capability from hardware validation with HotMic.
 Do not present this as a verified HotMic support matrix.
+
+## Paid-only launch model
+
+The site presents one complete product: a 14-day full-feature trial starting
+at the first meeting, then a paid license ($19 personal, $79 for 5 seats,
+$249 for 20 seats). No ongoing free tier, payment card for the trial, account,
+or automatic conversion. Secondary features and team options use native
+disclosures to keep the main purchase decision simple.
+
+Before releasing the app, update and validate its license gating to match:
+meeting controls stop after trial expiry without a valid license, while
+settings, diagnostics, activation and uninstall help remain accessible.
+The site change does not implement that app behavior. Keep download and
+purchase availability marked coming soon until launch requirements are met.
