@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HotMic for Mac: mute Google Meet with your AirPods stem</title>
-<meta name="description" content="Press your AirPods stem and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
+<title>HotMic for Mac: mute Google Meet right from your AirPods</title>
+<meta name="description" content="Press your AirPods stem or AirPods Max Digital Crown and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="home.css">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -14,8 +14,8 @@
 <meta name="theme-color" content="#f3f5f7">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HotMic">
-<meta property="og:title" content="HotMic for Mac: mute Google Meet with your AirPods stem">
-<meta property="og:description" content="Press your AirPods stem and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
+<meta property="og:title" content="HotMic for Mac: mute Google Meet right from your AirPods">
+<meta property="og:description" content="Press your AirPods stem or AirPods Max Digital Crown and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
 <meta property="og:url" content="https://usehotmic.com/">
 <link rel="canonical" href="https://usehotmic.com/">
 <meta property="og:image" content="https://usehotmic.com/assets/og-image.png">
@@ -23,8 +23,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The HotMic app icon and wordmark">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HotMic for Mac: mute Google Meet with your AirPods stem">
-<meta name="twitter:description" content="Press your AirPods stem and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
+<meta name="twitter:title" content="HotMic for Mac: mute Google Meet right from your AirPods">
+<meta name="twitter:description" content="Press your AirPods stem or AirPods Max Digital Crown and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
 <meta name="twitter:image" content="https://usehotmic.com/assets/og-image.png">
 <meta name="twitter:image:alt" content="The HotMic app icon and wordmark">
 </head>
@@ -49,234 +49,40 @@
   <div class="wrap hero-grid">
    <div class="hero-copy">
     <p class="eyebrow">A little Mac app. A quieter meeting.</p>
-    <h1><span class="l1">Squeeze your AirPods.</span> <span class="nb">Meet mutes.</span></h1>
-    <p class="sub">Your hands stay off the keyboard. Your mute state stays in sync. Press the stem to mute Google Meet. Press again to talk.</p>
+    <h1><span class="l1">Mute Meet.</span> <span class="nb">Right from<br>your AirPods.</span></h1>
+    <p class="sub">Press your AirPods stem or AirPods Max Digital Crown. Meet’s own mute button changes with you. Press again to talk.</p>
     <div class="cta-row">
         <a class="btn" href="#download" aria-describedby="dl-note">Get HotMic for Mac <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></a>
       <a class="btn quiet" href="#pricing">See pricing</a>
     </div>
     <p class="cta-note" id="dl-note">14 days of Pro from your first meeting. No card. No account.</p>
-    <p class="hero-requirements">For macOS 15+ · AirPods 3, AirPods 4 or AirPods Pro</p>
+    <p class="hero-requirements">macOS 15+ · AirPods 3 / 4, AirPods Pro or AirPods Max</p>
    </div>
-   <div class="demo-band" id="how">
-    <div class="demo-heading"><span>THE STEM → THE CALL</span><span class="demo-kind">Illustrated demo</span></div>
-    <figure class="demo">
-      <input type="checkbox" id="demo-pause" class="vh">
-      <label for="demo-pause" class="demo-pause" title="Toggle animation playback"><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z"/></svg><span class="pause-label">Pause demo</span><span class="play-label">Resume demo</span></label>
-      <div class="demo-stage" aria-hidden="true">
-
-        <div class="panel pod-panel">
-          <div class="panel-head">
-            <span class="sync-dot"><span class="d-live"></span><span class="d-muted"></span></span>
-            <span class="panel-name">01 / Your AirPods</span>
-          </div>
-          <div class="pod-crop">
-            <div class="pod-cam">
-              <svg class="airpod" viewBox="0 0 264 300" role="presentation">
-                <defs>
-                  <radialGradient id="pd-body" cx="0.36" cy="0.24" r="1.05">
-                    <stop offset="0" stop-color="#ffffff"/>
-                    <stop offset="0.45" stop-color="#f4f6f8"/>
-                    <stop offset="0.75" stop-color="#e3e7eb"/>
-                    <stop offset="1" stop-color="#c8ccd2"/>
-                  </radialGradient>
-                  <linearGradient id="pd-stem" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0" stop-color="#d0d4da"/>
-                    <stop offset="0.2" stop-color="#f1f3f5"/>
-                    <stop offset="0.45" stop-color="#ffffff"/>
-                    <stop offset="0.75" stop-color="#e4e8ec"/>
-                    <stop offset="1" stop-color="#c8ccd2"/>
-                  </linearGradient>
-                  <radialGradient id="pd-spec" cx="0.5" cy="0.5" r="0.5">
-                    <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
-                    <stop offset="0.6" stop-color="#ffffff" stop-opacity="0.5"/>
-                    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-                  </radialGradient>
-                  <radialGradient id="pd-ao" cx="0.5" cy="0.5" r="0.5">
-                    <stop offset="0" stop-color="#9aa1aa" stop-opacity="0.4"/>
-                    <stop offset="1" stop-color="#9aa1aa" stop-opacity="0"/>
-                  </radialGradient>
-                  <radialGradient id="pd-core" cx="0.5" cy="0.5" r="0.5">
-                    <stop offset="0" stop-color="#c4c9cf" stop-opacity="0.55"/>
-                    <stop offset="1" stop-color="#c4c9cf" stop-opacity="0"/>
-                  </radialGradient>
-                  <linearGradient id="pd-tipg" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0" stop-color="#d4d5d1"/>
-                    <stop offset="0.3" stop-color="#f1f2ee"/>
-                    <stop offset="0.55" stop-color="#fdfdfa"/>
-                    <stop offset="0.8" stop-color="#e6e7e2"/>
-                    <stop offset="1" stop-color="#c8c9c3"/>
-                  </linearGradient>
-                  <radialGradient id="pd-bore" cx="0.42" cy="0.38" r="0.8">
-                    <stop offset="0" stop-color="#3a4048"/>
-                    <stop offset="0.75" stop-color="#22262c"/>
-                    <stop offset="1" stop-color="#15181d"/>
-                  </radialGradient>
-                  <linearGradient id="pd-shine" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#ffffff" stop-opacity="0.95"/>
-                    <stop offset="0.85" stop-color="#ffffff" stop-opacity="0.35"/>
-                    <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-                  </linearGradient>
-                  <linearGradient id="pd-fing" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0" stop-color="#f7d2b0"/>
-                    <stop offset="0.45" stop-color="#eeb98f"/>
-                    <stop offset="1" stop-color="#d89c73"/>
-                  </linearGradient>
-                  <clipPath id="pd-sil">
-                    <path d="M76 96 C71 60 89 30 118 28 C146 26 166 46 166 74 C166 100 158 116 152 127 C150 131 149.5 136 149.4 142 L146.5 250 C146.3 263 140 271 131.5 271 C123 271 116.7 263 116.5 250 L114 150 C113.7 138 109.5 126 100 118 C87 110 77.5 106 76 96 Z"/>
-                  </clipPath>
-                  <clipPath id="pd-upper"><rect x="40" y="0" width="140" height="152"/></clipPath>
-                </defs>
-
-                <!-- stem: its own silhouette so it can spring-compress under the pinch -->
-                <g class="stem-squeeze">
-                  <path d="M149.4 140 L146.5 250 C146.3 263 140 271 131.5 271 C123 271 116.7 263 116.5 250 L114 148 C124 154 140 154 149.4 140 Z"
-                        fill="url(#pd-stem)"/>
-                  <rect x="121" y="146" width="4.5" height="114" rx="2.2" fill="url(#pd-shine)"/>
-                  <!-- touch strip on the stem's outer face, upper third -->
-                  <path d="M142.8 158 L142.1 196 C142.1 198.4 140.6 199.8 138.9 199.8 C137.2 199.8 136.1 198.4 136.2 196 L136.9 158 C137 155.6 138.4 154.2 140.1 154.2 C141.8 154.2 142.9 155.6 142.8 158 Z"
-                        fill="#dde1e6" opacity="0.85"/>
-                  <path d="M136.9 158 C137 155.6 138.4 154.2 140.1 154.2 L139.6 199.8 C138 199.8 136.1 198.4 136.2 196 Z"
-                        fill="#ffffff" opacity="0.55"/>
-                  <ellipse cx="125.5" cy="257" rx="5.8" ry="2.9" fill="#33383f" transform="rotate(-12 125.5 257)"/>
-                </g>
-
-                <!-- body above the stem junction -->
-                <g clip-path="url(#pd-upper)">
-                  <path d="M76 96 C71 60 89 30 118 28 C146 26 166 46 166 74 C166 100 158 116 152 127 C150 131 149.5 136 149.4 142 L146.5 250 C146.3 263 140 271 131.5 271 C123 271 116.7 263 116.5 250 L114 150 C113.7 138 109.5 126 100 118 C87 110 77.5 106 76 96 Z"
-                        fill="url(#pd-body)"/>
-                  <g clip-path="url(#pd-sil)">
-                    <ellipse cx="148" cy="104" rx="24" ry="28" fill="url(#pd-core)"/>
-                    <path d="M157 40 C164 51 167.5 61 166 76 C164.4 93 158 108 151 119 C158.5 105 163 89 163 73 C163 60 160.6 48 157 40 Z"
-                          fill="#bcc2c9" opacity="0.42"/>
-                    <ellipse cx="108" cy="45" rx="34" ry="17" fill="url(#pd-spec)" transform="rotate(-24 108 45)"/>
-                    <ellipse cx="108" cy="120" rx="18" ry="9" fill="#ffffff" opacity="0.28"/>
-                    <ellipse cx="94" cy="86" rx="27" ry="17" fill="url(#pd-ao)" transform="rotate(-60 94 86)"/>
-                  </g>
-                  <rect x="156" y="90" width="9" height="3.2" rx="1.6" fill="#767d87" opacity="0.5" transform="rotate(64 160.5 91.6)"/>
-                </g>
-
-                <!-- ambient occlusion across the body-to-stem junction -->
-                <g clip-path="url(#pd-sil)">
-                  <ellipse cx="131" cy="148" rx="19" ry="8" fill="url(#pd-ao)"/>
-                </g>
-
-                <!-- silicone ear tip -->
-                <g transform="translate(87.5 86.5) rotate(-62) scale(1.05)">
-                  <path d="M -24 4 C -25.5 -8 -22 -20 -15 -28 A 15 7.5 0 0 1 15 -28 C 22 -20 25.5 -8 24 4 C 24 10 13 14 0 14 C -13 14 -24 10 -24 4 Z"
-                        fill="url(#pd-tipg)"/>
-                  <path d="M -23.5 2 C -12 -3.5 12 -3.5 23.5 2" fill="none" stroke="#abaea8" stroke-width="1.3" opacity="0.8"/>
-                  <path d="M -23.5 4 C -12 -1.2 12 -1.2 23.5 4" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.65"/>
-                  <ellipse cx="0" cy="-28" rx="11" ry="6" fill="url(#pd-bore)"/>
-                  <ellipse cx="0" cy="-28" rx="11" ry="6" fill="none" stroke="#92958f" stroke-width="1" opacity="0.55"/>
-                  <ellipse cx="-3.4" cy="-29.4" rx="3.8" ry="1.6" fill="#ffffff" opacity="0.22"/>
-                  <path d="M -17 -22 C -19 -13 -20 -4 -19 2 C -15 -7 -14 -16 -12 -24 Z" fill="#ffffff" opacity="0.55"/>
-                </g>
-
-                <!-- squeeze choreography: two fingertips pinch the stem; shockwave ring + press flash on the touch strip -->
-                <g class="pad pad-l">
-                  <path d="M8 160 L94 158.5 C107 158.5 115.5 165.5 115.5 176 C115.5 186.5 107 193.5 94 193.5 L8 192 Z" fill="url(#pd-fing)"/>
-                  <path d="M8 188.5 L92 188 C102 187.5 109.5 183.5 113.2 177.5 C112.6 186.6 105 193.5 94 193.5 L8 192 Z" fill="#c08055" opacity="0.4"/>
-                  <ellipse cx="99" cy="167" rx="11" ry="4.4" fill="#ffffff" opacity="0.42"/>
-                  <path d="M60 161 C58 168 58 184 60 191" fill="none" stroke="#b97f5c" stroke-width="1.2" opacity="0.35"/>
-                  <path d="M47 161.5 C45.4 168 45.4 184 47 190.5" fill="none" stroke="#b97f5c" stroke-width="1" opacity="0.25"/>
-                </g>
-                <g class="pad pad-r">
-                  <path d="M255 160 L169 158.5 C156 158.5 147.5 165.5 147.5 176 C147.5 186.5 156 193.5 169 193.5 L255 192 Z" fill="url(#pd-fing)"/>
-                  <path d="M255 188.5 L171 188 C161 187.5 153.5 183.5 149.8 177.5 C150.4 186.6 158 193.5 169 193.5 L255 192 Z" fill="#c08055" opacity="0.4"/>
-                  <ellipse cx="164" cy="167" rx="11" ry="4.4" fill="#ffffff" opacity="0.42"/>
-                  <path d="M203 161 C205 168 205 184 203 191" fill="none" stroke="#b97f5c" stroke-width="1.2" opacity="0.35"/>
-                  <path d="M216 161.5 C217.6 168 217.6 184 216 190.5" fill="none" stroke="#b97f5c" stroke-width="1" opacity="0.25"/>
-                </g>
-                <circle class="ring ring-a" cx="138" cy="176" r="27"/>
-                <circle class="ring ring-b" cx="138" cy="176" r="27"/>
-                <circle class="flash flash-a" cx="139.7" cy="176.5" r="6.5"/>
-                <circle class="flash flash-b" cx="139.7" cy="176.5" r="6.5"/>
-                <g class="squeeze-chip">
-                  <rect x="53" y="204" width="66" height="24" rx="12" fill="#171c24"/>
-                  <text x="86" y="220.5" text-anchor="middle">Squeeze</text>
-                </g>
-              </svg>
-            </div>
-          </div>
+   <div class="try-demo" id="how">
+    <figure class="press-demo">
+      <input type="checkbox" id="try-mute" class="vh" aria-label="Mute the illustrative call" aria-describedby="try-help">
+      <div class="call-window" aria-hidden="true">
+        <div class="call-titlebar"><span class="window-dots"><i></i><i></i><i></i></span><span>Google Meet</span><span class="illustration-tag">Illustration</span></div>
+        <div class="call-context"><span>Design check-in</span><span class="call-status"><span class="state-live">Mic on</span><span class="state-muted">Mic off</span></span></div>
+        <div class="call-person">
+          <div class="person-avatar">Y</div>
+          <span class="person-name">You</span>
+          <span class="person-state"><span class="state-live">Ready to speak</span><span class="state-muted">You’re muted</span></span>
+          <span class="person-mute"><svg viewBox="0 0 24 24"><path d="M9 9v3a3 3 0 0 0 5 2M15 9V5a3 3 0 0 0-6 0M5 10v2a7 7 0 0 0 12 5M19 10v2M12 19v3M8 22h8M3 3l18 18"/></svg></span>
         </div>
-
-        <div class="link-col">
-          <svg class="link link-h" viewBox="0 0 120 40" preserveAspectRatio="none">
-            <path class="track" d="M2 20 H118" pathLength="100"/>
-            <path class="sig sig-a" d="M2 20 H118" pathLength="100"/>
-            <path class="sig sig-b" d="M2 20 H118" pathLength="100"/>
-          </svg>
-          <svg class="link link-v" viewBox="0 0 40 96" preserveAspectRatio="none">
-            <path class="track" d="M20 2 V94" pathLength="100"/>
-            <path class="sig sig-a" d="M20 2 V94" pathLength="100"/>
-            <path class="sig sig-b" d="M20 2 V94" pathLength="100"/>
-          </svg>
-          <span class="bridge-node"></span>
-          <span class="bridge"><span class="bridge-dot"></span>HotMic</span>
+        <div class="call-controls">
+          <span class="call-mic"><svg class="state-live" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></svg><svg class="state-muted" viewBox="0 0 24 24"><path d="M9 9v3a3 3 0 0 0 5 2M15 9V5a3 3 0 0 0-6 0M5 10v2a7 7 0 0 0 12 5M19 10v2M12 19v3M8 22h8M3 3l18 18"/></svg></span>
+          <span class="call-camera"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="12" height="12" rx="3"/><path d="m15 10 6-3v10l-6-3"/></svg></span>
+          <span class="call-more">···</span>
+          <span class="call-end"><svg viewBox="0 0 24 24"><path d="M3 13c5-5 13-5 18 0l-2 4-4-2v-3M9 12v3l-4 2-2-4"/></svg></span>
         </div>
-
-        <div class="panel meet-panel">
-          <div class="panel-head">
-            <span class="sync-dot"><span class="d-live"></span><span class="d-muted"></span></span>
-            <span class="panel-name">02 / Google Meet</span>
-          </div>
-          <div class="meet-tile">
-            <svg class="avatar" viewBox="0 0 48 48" role="presentation">
-              <circle cx="24" cy="24" r="24" fill="#3c4043"/>
-              <circle cx="24" cy="19" r="8" fill="#8b9096"/>
-              <path d="M8 44 C10 33 17 29 24 29 C31 29 38 33 40 44 Z" fill="#8b9096"/>
-            </svg>
-            <span class="you-tag">You</span>
-            <span class="speak-badge"><span class="sb"></span><span class="sb"></span><span class="sb"></span></span>
-            <span class="mute-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round">
-                <rect x="9" y="3" width="6" height="11" rx="3" fill="#ffffff" stroke="none"/>
-                <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/>
-                <line x1="12" y1="18" x2="12" y2="21"/>
-                <line x1="4" y1="2.5" x2="20" y2="20.5" stroke-width="2.6"/>
-              </svg>
-            </span>
-            <span class="toast t-muted">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#f0564c" stroke-width="2" stroke-linecap="round">
-                <rect x="9" y="3" width="6" height="11" rx="3" fill="#f0564c" stroke="none"/>
-                <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/>
-                <line x1="12" y1="18" x2="12" y2="21"/>
-                <line x1="4" y1="2.5" x2="20" y2="20.5" stroke-width="2.6"/>
-              </svg>
-              Muted in Meet
-            </span>
-            <span class="toast t-live">You're live</span>
-          </div>
-          <div class="meet-bar">
-            <div class="pill">
-              <span class="live">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round">
-                  <rect x="9" y="3" width="6" height="11" rx="3" fill="#ffffff" stroke="none"/>
-                  <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/>
-                  <line x1="12" y1="18" x2="12" y2="21"/>
-                </svg>
-              </span>
-              <span class="muted">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round">
-                  <rect x="9" y="3" width="6" height="11" rx="3" fill="#ffffff" stroke="none"/>
-                  <path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/>
-                  <line x1="12" y1="18" x2="12" y2="21"/>
-                  <line x1="4" y1="2.5" x2="20" y2="20.5" stroke-width="2.4"/>
-                </svg>
-              </span>
-            </div>
-            <div class="mbtn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="#e8eaed" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="6" width="13" height="12" rx="2.5"/>
-                <path d="M16 10.5 L21 7.5 V16.5 L16 13.5"/>
-              </svg>
-            </div>
-          </div>
-        </div>
-
+        <p class="call-outcome"><span class="state-live">Your voice and Meet’s button agree.</span><span class="state-muted">Mic muted. Meet’s button agrees.</span></p>
       </div>
-      <figcaption><span class="demo-caption-live">You’re live. Squeeze to mute.</span><span class="demo-caption-muted">Muted in Meet. Squeeze again to talk.</span></figcaption>
+      <div class="press-interaction">
+        <div class="press-intro"><span class="press-kicker">TRY THE IDEA</span><p>One press. You’re in control.</p></div>
+        <label class="press-toggle" for="try-mute"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 15V9a6 6 0 0 1 12 0v6M6 11H4v7h4v-7H6m12 0h2v7h-4v-7h2"/></svg><span class="state-live">Press to mute</span><span class="state-muted">Press to unmute</span></label>
+      </div>
+      <figcaption id="try-help">Try it here. On your call, use your AirPods stem or AirPods Max Digital Crown.</figcaption>
     </figure>
    </div>
   </div>
@@ -338,11 +144,11 @@
 <section class="setup" aria-labelledby="setup-h">
   <div class="wrap">
     <p class="section-kicker">From download to your next call</p>
-    <h2 id="setup-h">One quick setup. Then just squeeze.</h2>
+    <h2 id="setup-h">One quick setup. Then just press.</h2>
     <ol class="setup-steps">
       <li><span class="step-number">01</span><h3>Meet HotMic.</h3><p>Open the Mac app. The setup guide walks you through permissions and a practice press.</p></li>
       <li><span class="step-number">02</span><h3>Connect your browser.</h3><p>Add the HotMic extension to Chrome, Edge, Brave or Arc to sync Meet’s mute button.</p></li>
-      <li><span class="step-number">03</span><h3>Make it muscle memory.</h3><p>Try it in a private Meet call. Squeeze to mute; squeeze again when you’re ready to speak.</p></li>
+      <li><span class="step-number">03</span><h3>Make it muscle memory.</h3><p>Try it in a private Meet call. Press to mute; press again when you’re ready to speak.</p></li>
     </ol>
   </div>
 </section>
@@ -399,9 +205,10 @@
     <p class="section-kicker">Before your next meeting</p>
     <h2 id="faq-h">A few good questions.</h2>
     <div class="faq-list">
-      <details><summary>Which AirPods and Macs work?</summary><p>You’ll need macOS 15 or later and AirPods (3rd generation or later) or AirPods Pro. If you’re on macOS 27, check compatibility during the trial.</p></details>
+      <details><summary>Which AirPods and Macs work?</summary><p>You’ll need macOS 15 or later and AirPods (3rd generation or later), AirPods Pro or AirPods Max. Squeeze the stem on AirPods and AirPods Pro; press the Digital Crown on AirPods Max. If you’re on macOS 27, check compatibility during the trial.</p></details>
       <details><summary>Do I need the browser extension?</summary><p>Yes, to sync Google Meet’s own mute button through the browser bridge. The setup guide helps you connect it in Chrome, Edge, Brave or Arc. Without that connection, HotMic can use device-level mute instead.</p></details>
       <details><summary>What about Zoom, FaceTime and Teams?</summary><p>Zoom 6.4+, FaceTime and the native Teams app already support the stem gesture, so HotMic leaves them alone. Teams on the web is in beta. In other apps, HotMic can mute your Mac’s mics, but the app’s mute indicator may not change.</p></details>
+      <details><summary>What about Beats?</summary><p>Apple documents call-mute controls on Beats Studio Pro, Solo 4, Solo Buds, Studio Buds +, Fit Pro and Powerbeats Pro 2. These native controls do not yet establish compatibility with HotMic’s Meet bridge: we haven’t verified Beats with HotMic on hardware. <a href="https://support.apple.com/guide/beats/customize-beats-controls-dev9eeff2d7b/web">Apple’s Beats controls guide.</a></p></details>
       <details><summary>What happens after 14 days?</summary><p>Device mute, the mute shortcut, Go to meeting and Join Meet muted stay free. Pro adds Meet mute sync, Stealth Mute and push-to-talk, with a one-time purchase.</p></details>
       <details><summary>Does HotMic record my conversations?</summary><p>No. Your audio is never recorded, stored or sent. HotMic runs on your Mac, with no analytics or trackers. <a href="privacy.html">Read the privacy policy.</a></p></details>
     </div>
@@ -416,7 +223,7 @@
         <a class="btn" href="https://github.com/mikaelq/hotmic/releases">Check Mac releases <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></a>
     </div>
     <p class="cta-note">Download availability is listed on GitHub Releases. Pro checkout is coming soon.</p>
-    <p class="fine">macOS 15 or later. AirPods (3rd gen or later) or AirPods&nbsp;Pro. Zoom 6.4+, FaceTime and the Teams app handle the stem&nbsp;themselves. On macOS&nbsp;27? Test it during the&nbsp;trial.</p>
+    <p class="fine">macOS 15 or later. AirPods (3rd gen or later), AirPods&nbsp;Pro or AirPods&nbsp;Max. Zoom 6.4+, FaceTime and the Teams app handle the stem&nbsp;themselves. On macOS&nbsp;27? Test it during the&nbsp;trial.</p>
   </div>
 </section>
 
