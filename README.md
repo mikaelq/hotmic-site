@@ -92,14 +92,13 @@ in a browser. No package install or build is required. `styles.css` contains
 the shared site styling; `home.css` contains the homepage layout and demo
 refinements and is loaded only by `index.html`.
 
-The illustrative demo uses a ten-second CSS timeline: AirPods stem squeeze,
-signal, Meet mute, hold, AirPods Max Digital Crown press, Meet unmute. The caption follows the same state.
-The playback checkbox pauses the stage, pseudo-elements and caption together.
-With reduced motion, the demo shows a consistent static muted state instead.
-When adjusting timing, check both state holds, the loop boundary, pause/resume,
-and reduced motion. Check layouts at 320, 375, 768, 1024 and 1440 pixels and
-confirm the legal and guide pages still render. FAQs use native `details`
-controls, without scripts or external dependencies.
+The homepage demonstration is an interactive call illustration with no
+automatic loop or hardware artwork. The native checkbox toggles the mic
+button, participant badge, status and explanatory copy together. Its label
+supports pointer and keyboard input; reduced motion removes transitions.
+Check layouts at 320, 375, 768, 1024 and 1440 pixels, both mute states,
+keyboard toggling, reduced motion, and the legal and guide pages. FAQs use
+native `details` controls, without scripts or external dependencies.
 
 Beats research: Apple’s model-specific user guides document call-mute
 controls for Studio Pro, Solo 4, Solo Buds, Studio Buds +, Fit Pro and
