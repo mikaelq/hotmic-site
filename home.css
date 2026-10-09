@@ -198,3 +198,29 @@
 .mini .link-v { display: none; }
 .mini .link-col { min-height: 100%; }
 .cta-arrow { width: 13px; height: 13px; margin-left: 6px; vertical-align: -1px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+/* First gesture: AirPods stem. Second gesture: AirPods Max Digital Crown. */
+.mini .m-hero h1 { max-width: none; font-size: clamp(3rem,4.3vw,4.3rem); }
+.mini .m-hero h1 .l1 { display: block; }
+.mini .m-hero h1 .nb { white-space: normal; }
+.mini .pod-cam, .model-earbuds { animation: show-earbuds var(--cycle) steps(1,end) infinite; }
+.airpods-max { position: absolute; top: 26px; left: 50%; width: 264px; margin-left: -132px; opacity: 0; animation: show-max var(--cycle) steps(1,end) infinite; filter: drop-shadow(0 12px 14px #171c2422); }
+.model-max { display: inline-block; width: 0; overflow: hidden; white-space: nowrap; animation: model-max var(--cycle) steps(1,end) infinite; }
+.model-earbuds { display: inline-block; overflow: hidden; animation: model-earbuds var(--cycle) steps(1,end) infinite; }
+@keyframes show-earbuds { 0%, 39% { opacity: 1; visibility: visible; } 40%, 99% { opacity: 0; visibility: hidden; } 100% { opacity: 1; visibility: visible; } }
+@keyframes show-max { 0%, 39% { opacity: 0; visibility: hidden; } 40%, 99% { opacity: 1; visibility: visible; } 100% { opacity: 0; visibility: hidden; } }
+@keyframes model-earbuds { 0%, 39% { width: auto; } 40%, 99% { width: 0; } 100% { width: auto; } }
+@keyframes model-max { 0%, 39% { width: 0; } 40%, 99% { width: auto; } 100% { width: 0; } }
+.crown-finger { opacity: 0; animation: crown-touch var(--cycle) ease-in-out infinite; }
+.crown-press { animation: crown-click var(--cycle) ease-in-out infinite; }
+.crown-ring { opacity: 0; transform-origin: 215px 140px; animation: crown-ripple var(--cycle) ease-out infinite; }
+@keyframes crown-touch { 0%, 40% { opacity: 0; transform: translateY(-22px); } 44%,45% { opacity: 1; transform: translateY(-4px); } 46%,48% { opacity: 1; transform: translateY(2px); } 50% { opacity: 1; transform: translateY(-4px); } 55%,100% { opacity: 0; transform: translateY(-22px); } }
+@keyframes crown-click { 0%,45%,50%,100% { transform: translateY(0); } 46%,48% { transform: translateY(2px); } }
+@keyframes crown-ripple { 0%,46% { opacity: 0; transform: scale(.6); } 47% { opacity: .8; transform: scale(.8); } 52% { opacity: 0; transform: scale(1.8); } 100% { opacity: 0; transform: scale(1.8); } }
+#demo-pause:checked ~ .demo-stage .panel-name * { animation-play-state: paused; }
+@media (max-width:560px) { .airpods-max { width: 216px; margin-left: -108px; top: 22px; } .mini .m-hero h1 { font-size: clamp(2.5rem,10vw,3.6rem); } }
+@media (prefers-reduced-motion:reduce) {
+  .mini .pod-cam, .model-earbuds { animation: none; opacity: 1; visibility: visible; width: auto; }
+  .airpods-max, .model-max { animation: none; opacity: 0; visibility: hidden; }
+  .model-max { width: 0; }
+  .crown-finger, .crown-press, .crown-ring { animation: none; }
+}
