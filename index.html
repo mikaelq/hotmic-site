@@ -6,12 +6,32 @@
 <title>HotMic for Mac — your AirPods stem press, in Google Meet's own mute button</title>
 <meta name="description" content="Press your AirPods stem and Google Meet's own mute button flips. HotMic makes the gesture work in every app that never adopted Apple's mute API.">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#f3f5f7">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HotMic">
+<meta property="og:title" content="HotMic for Mac — your AirPods stem press, in Google Meet's own mute button">
+<meta property="og:description" content="Press your AirPods stem and Google Meet's own mute button flips. HotMic makes the gesture work in every app that never adopted Apple's mute API.">
+<meta property="og:url" content="https://usehotmic.com/">
+<meta property="og:image" content="https://usehotmic.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The HotMic app icon and wordmark">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HotMic for Mac — your AirPods stem press, in Google Meet's own mute button">
+<meta name="twitter:description" content="Press your AirPods stem and Google Meet's own mute button flips. HotMic makes the gesture work in every app that never adopted Apple's mute API.">
+<meta name="twitter:image" content="https://usehotmic.com/assets/og-image.png">
+<meta name="twitter:image:alt" content="The HotMic app icon and wordmark">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="site-head">
   <div class="wrap">
-    <a class="wordmark" href="index.html">HotMic<span class="dot">.</span></a>
+    <a class="wordmark" href="index.html"><img class="glyph" src="assets/glyph-56.png" srcset="assets/glyph-56.png 2x, assets/glyph-84.png 3x" alt="" width="18" height="28">HotMic<span class="dot">.</span></a>
     <nav aria-label="Site">
       <a href="#how">How it works</a>
       <a href="#privacy">Privacy</a>
@@ -21,7 +41,7 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="hero">
   <div class="wrap">
@@ -32,7 +52,7 @@
       <a class="btn" href="#" aria-describedby="dl-note">Download HotMic for Mac</a>
       <a class="btn quiet" href="#pricing">See pricing</a>
     </div>
-    <p class="cta-note" id="dl-note">Free for 14 days, full features, no card. Device-level mute stays free forever.</p>
+    <p class="cta-note" id="dl-note">Free for 14 days from your first meeting, full features, no card. Device-level mute stays free.</p>
   </div>
 </section>
 
@@ -261,14 +281,14 @@
   <div class="wrap">
     <div class="prose">
       <h2>Mute apps that lie to you are worse than no mute app.</h2>
-      <p>Every AirPods mute utility advertises the stem press. Almost all of them mute at the device level: your peers stop hearing you, but the meeting app has no idea. Google Meet keeps showing you as live while you say nothing, and its own mute button now disagrees with reality — two switches, each unaware of the other. That mismatch is exactly how hot-mic moments happen.</p>
-      <p>HotMic flips the meeting app's own control instead. There is one mute state, and you, Meet, and everyone on the call see the same one.</p>
+      <p>Many AirPods mute utilities mute at the device level: your peers stop hearing you, but the meeting app has no idea. Google Meet keeps showing you as live while you say nothing, and its own mute button now disagrees with reality — two switches, each unaware of the other. That mismatch is exactly how hot-mic moments happen.</p>
+      <p>Where it can (Google Meet in Chrome, Edge, Brave, Arc or Chromium, and, with less testing so far, Microsoft Teams on the web), HotMic flips the meeting's own mute button instead. There is one mute state, and you, the meeting, and everyone on the call see the same one. Everywhere else it mutes at the device level, and the menu bar tells you so.</p>
     </div>
     <table class="truth">
       <caption>You press the stem to mute. What happens next:</caption>
       <thead>
         <tr>
-          <th scope="col"></th>
+          <th scope="col"><span class="vh">Approach</span></th>
           <th scope="col">What peers hear</th>
           <th scope="col">What Meet shows</th>
         </tr>
@@ -280,7 +300,7 @@
           <td class="bad">"You're live" — wrong</td>
         </tr>
         <tr>
-          <td>HotMic</td>
+          <td>HotMic <span class="where">in Meet (Chrome)</span></td>
           <td>Silence</td>
           <td class="good">Muted — in sync</td>
         </tr>
@@ -293,29 +313,38 @@
   <div class="wrap">
     <div class="prose">
       <h2>How it works</h2>
-      <p>Apple only delivers the AirPods stem-press to a process the system believes is handling a call's audio. HotMic runs exactly that kind of audio unit — but every sample it receives is rendered and immediately discarded, and it only runs while another app is already using your microphone. Outside meetings it is dormant, so it never drags your AirPods into low-quality phone-call audio.</p>
+      <p>Apple only delivers the AirPods stem-press to a process the system believes is handling a call's audio. HotMic runs exactly that kind of audio unit — but every sample it receives is rendered and immediately discarded, and it only runs while another app is already using your microphone. Outside meetings it is dormant, so it doesn't pull your AirPods into low-quality phone-call audio. The one exception is a short practice step in setup, which you start yourself.</p>
       <p>Once HotMic has the gesture, it mutes through the best route available:</p>
     </div>
     <ul class="routes">
-      <li class="primary"><strong>In-app sync</strong> — a small browser extension flips the meeting tab's own mute button, and changes made in the tab sync back. Google Meet is verified; Microsoft Teams support is in place.</li>
-      <li class="primary"><strong>Virtual headset</strong> — HotMic can present itself as a call-control headset (the same mechanism a Jabra or Poly headset uses), so apps that speak that protocol flip their own mute UI. This route runs on an Apple-approval-gated system capability granted to HotMic.</li>
-      <li><strong>Device fallback</strong> — everywhere else, HotMic mutes the microphone itself. Works with any app; this is the honest last resort, and the menu bar tells you which route you're on.</li>
+      <li class="primary"><strong>In-app sync</strong> — the HotMic for Meet &amp; Teams extension (Chrome, Edge, Brave, Arc, Chromium) flips the meeting tab's own mute button, and changes made in the tab sync back. Google Meet is verified. Microsoft Teams on the web works through the same extension but has had less testing, and personal Teams in a language other than English isn't detected yet. The Teams Mac app handles the stem press itself.</li>
+      <li class="primary"><strong>Virtual headset</strong> — HotMic adds a "HotMic Headset" that Google Meet can pair with as a call-control headset (the same mechanism a Jabra or Poly headset uses), so Meet flips its own mute button. You connect it once in Meet's settings. macOS asks you to allow HotMic under Accessibility, which HotMic uses only to create the headset. This route runs on an Apple-approval-gated system capability granted to HotMic.</li>
+      <li><strong>Device fallback</strong> — everywhere else, HotMic mutes every microphone on your Mac that can be silenced. Works with any app, though the app's own button won't change; this is the honest last resort, and the menu bar tells you which route you're on. You can turn it off in Settings.</li>
     </ul>
-    <div class="prose">
-      <p>Apps with native stem-press support, like FaceTime and recent Zoom, are left alone — HotMic stays out of the way so the built-in gesture keeps working. A global hotkey and an on-screen mute indicator round it out, and the indicator never appears in your screen shares.</p>
+    <div class="prose outro">
+      <p>HotMic leaves FaceTime, Zoom and the Microsoft Teams Mac app alone, so their own stem-press support keeps working (in Zoom, that's version 6.4 or later).</p>
     </div>
+    <div class="prose extras-lead">
+      <p>Keyboard shortcuts (mute, push-to-talk, Stealth Mute and go to meeting, each one changeable) and an on-screen mute indicator round it out. A few more things it does:</p>
+    </div>
+    <ul class="extras">
+      <li><strong>Stealth Mute</strong> <span class="tag">Pro</span> — off by default. Mutes every mic on your Mac that can be silenced while the meeting still shows you unmuted. HotMic's menu bar icon and on-screen indicator still show you as muted. <kbd>⌃⌥⇧M</kbd> turns it on or off.</li>
+      <li><strong>Push-to-talk</strong> <span class="tag">Pro</span> — pick a key, hold it to talk while you're muted, and let go to mute again.</li>
+      <li><strong>Pause music during meetings</strong> <span class="tag">Pro</span> — off by default. HotMic pauses Music or Spotify when a call starts and resumes what it paused when the call ends. macOS asks your permission first.</li>
+      <li><strong>Go to meeting</strong> — a menu item, or a shortcut you choose, brings your Meet or Teams tab and its window to the front.</li>
+      <li><strong>Join Meet muted</strong> — turn it on in the extension, and on Meet's pre-join screen it switches your mic (and, if you choose, your camera) off before you join.</li>
+      <li><strong>Ask before closing a meeting tab</strong> — during a Meet or Teams call, the extension has your browser confirm before the tab closes or reloads. On by default; you can turn it off.</li>
+    </ul>
   </div>
 </section>
-
-</main>
 
 <div class="trust-band" id="privacy">
   <div class="wrap">
     <h2>Privacy</h2>
     <p class="lead">Your audio is rendered and discarded on your Mac. No audio ever leaves your device.</p>
     <ul>
-      <li>Nothing is recorded, stored, or transmitted. The audio unit exists only so macOS will deliver the mute gesture; the samples go nowhere.</li>
-      <li>The one network request the app makes is an update check, which sends your IP address and app version to the update server — we say this because "no network at all" would be a lie, and we don't do those.</li>
+      <li>Your audio is never recorded, stored, or transmitted. The audio unit exists only so macOS will deliver the mute gesture; the samples go nowhere.</li>
+      <li>The app's only network activity is updates: a check (automatic if you agree, or when you ask) sends your IP address and app version to the update server — we say this because "no network at all" would be a lie, and we don't do those.</li>
       <li>No analytics, no cookies, no trackers — in the app or on this site.</li>
       <li>The app is sandboxed, and the virtual-headset capability it uses is individually reviewed and granted by Apple.</li>
     </ul>
@@ -327,7 +356,7 @@
   <div class="wrap">
     <div class="prose">
       <h2>One price, yours forever.</h2>
-      <p>Every download starts a 14-day trial of everything, no card. When it ends, HotMic keeps working for free with device-level mute and the hotkey; a license unlocks the synced routes. No subscription — you buy it once.</p>
+      <p>Everything is included for 14 days, counted from your first meeting (the first time another app uses your mic), no card. When it ends, HotMic keeps working for free with device-level mute and the mute shortcut; a license adds: Meet's own mute button following your press (through the browser extension or the HotMic Headset; Teams on the web too, through the extension), Stealth Mute, push-to-talk, and pausing your music during meetings. No subscription — you buy it once.</p>
     </div>
     <!-- Buy buttons are placeholders: Paddle.js checkout wiring comes later.
          The data-paddle-price-id attributes below carry the LIVE Paddle price IDs. -->
@@ -335,15 +364,15 @@
       <thead>
         <tr>
           <th scope="col">License</th>
-          <th scope="col"></th>
+          <th scope="col"><span class="vh">Who it's for</span></th>
           <th scope="col">Price</th>
-          <th scope="col"></th>
+          <th scope="col"><span class="vh">Buy</span></th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td class="tier">Personal</td>
-          <td class="who">One person, all the Macs they own.</td>
+          <td class="who">One person, all the Macs they own or control.</td>
           <td class="amount">$19 <small>one-time</small></td>
           <td class="buy"><a class="btn" href="#" data-paddle-price-id="pri_01m32qxtfpzraze0hqzb26wvke">Buy Personal</a></td>
         </tr>
@@ -369,15 +398,17 @@
   <div class="wrap">
     <div class="prose">
       <h2>Get HotMic</h2>
-      <p>Requires macOS and AirPods (or the global hotkey, which works with any microphone). In-app Meet sync uses a companion extension for Chrome-family browsers.</p>
+      <p>Requires macOS 15 Sequoia or later and AirPods (or the mute shortcut, which works with any microphone). Meet and Teams sync uses the HotMic for Meet &amp; Teams browser extension, which HotMic helps you add, in Chrome, Edge, Brave, Arc or Chromium. In other browsers, HotMic mutes at the device level instead.</p>
       <div class="cta-row">
         <!-- TODO: replace href with the GitHub Releases download URL (dmg) before launch -->
         <a class="btn" href="#">Download HotMic for Mac</a>
       </div>
-      <p class="cta-note">14-day full trial starts on first launch. No account, no card, no sign-up.</p>
+      <p class="cta-note">Your 14-day trial starts with your first meeting, not at install. No account, no card, no sign-up.</p>
     </div>
   </div>
 </section>
+
+</main>
 
 <footer class="site-foot">
   <div class="wrap">
@@ -385,8 +416,15 @@
       <a href="privacy.html">Privacy policy</a>
       <a href="eula.html">License agreement</a>
     </nav>
-    <p>HotMic for Mac is not affiliated with, endorsed by, or sponsored by Apple Inc., Google LLC, or Microsoft Corporation. AirPods and macOS are trademarks of Apple Inc.; Google Meet is a trademark of Google LLC; Microsoft Teams is a trademark of Microsoft Corporation.</p>
-    <p>&copy; 2026 HotMic for Mac</p>
+    <p>HotMic for Mac is not affiliated with, endorsed by, or sponsored by Apple, Google, Microsoft, Spotify, Zoom, or any headset maker. AirPods, Apple Music, FaceTime and macOS are trademarks of Apple Inc.; Google Meet and Chrome are trademarks of Google LLC; Microsoft Teams is a trademark of Microsoft Corporation; Spotify is a trademark of Spotify AB. Other names are trademarks of their respective owners.</p>
+    <p>&copy; 2026 Duck Duck Grey Duck LLC</p>
+    <p class="maker">
+      <span class="maker-label">Built by</span>
+      <picture>
+        <source type="image/webp" srcset="assets/ddgd-logo-360.webp 2x, assets/ddgd-logo-540.webp 3x">
+        <img src="assets/ddgd-logo-360.png" srcset="assets/ddgd-logo-360.png 2x, assets/ddgd-logo-540.png 3x" alt="Duck Duck Grey Duck LLC" width="360" height="151" loading="lazy" decoding="async">
+      </picture>
+    </p>
   </div>
 </footer>
 

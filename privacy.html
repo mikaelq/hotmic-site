@@ -6,28 +6,50 @@
 <title>HotMic — Privacy policy</title>
 <meta name="description" content="HotMic's privacy policy: audio is rendered and discarded locally, never recorded, stored, or transmitted. No analytics, no cookies.">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#f3f5f7">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HotMic">
+<meta property="og:title" content="HotMic — Privacy policy">
+<meta property="og:description" content="HotMic's privacy policy: audio is rendered and discarded locally, never recorded, stored, or transmitted. No analytics, no cookies.">
+<meta property="og:url" content="https://usehotmic.com/privacy.html">
+<meta property="og:image" content="https://usehotmic.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The HotMic app icon and wordmark">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HotMic — Privacy policy">
+<meta name="twitter:description" content="HotMic's privacy policy: audio is rendered and discarded locally, never recorded, stored, or transmitted. No analytics, no cookies.">
+<meta name="twitter:image" content="https://usehotmic.com/assets/og-image.png">
+<meta name="twitter:image:alt" content="The HotMic app icon and wordmark">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header class="site-head">
   <div class="wrap">
-    <a class="wordmark" href="index.html">HotMic<span class="dot">.</span></a>
+    <a class="wordmark" href="index.html"><img class="glyph" src="assets/glyph-56.png" srcset="assets/glyph-56.png 2x, assets/glyph-84.png 3x" alt="" width="18" height="28">HotMic<span class="dot">.</span></a>
     <nav aria-label="Site">
       <a href="index.html#how">How it works</a>
+      <a href="privacy.html" aria-current="page">Privacy</a>
       <a href="index.html#pricing">Pricing</a>
-      <a href="eula.html">License agreement</a>
+      <a href="index.html#download">Download</a>
     </nav>
   </div>
 </header>
 
-<main class="legal">
+<main id="main" class="legal">
   <div class="wrap">
     <div class="prose">
       <h1>Privacy policy</h1>
-      <p class="updated">Last updated: September 21, 2026</p>
+      <p class="updated">Last updated: October 9, 2026</p>
 
       <p>This is the whole policy. It covers the HotMic app, its browser
-      extension and helper components, and this website.</p>
+      extension and helper components, and this website. HotMic is made by
+      Duck Duck Grey Duck LLC ("we").</p>
 
       <h2>Your audio stays on your Mac</h2>
       <p>To receive the AirPods mute gesture from macOS, HotMic runs an audio
@@ -36,13 +58,94 @@
       on your Mac</strong>. Your audio is never recorded, never stored, and
       never transmitted off your device by HotMic. There is no code path that
       could send it anywhere.</p>
+      <p>HotMic listens for the gesture only while another app is using your
+      microphone, which is how it tells you're in a meeting, and while the
+      practice screen in its setup is open. To know, it asks macOS which apps
+      are using the microphone; it never hears their audio. By default it
+      stays out of the way of Zoom, FaceTime and the Teams app, which handle
+      the gesture themselves. The rest of the time the audio unit isn't
+      running.</p>
 
-      <h2>The one network request the app makes</h2>
-      <p>HotMic periodically contacts its update server to check for new
-      versions (using the Sparkle update framework). Like any web request,
-      this transmits your IP address, along with the app version, so the
-      server can answer "is there something newer?". That is the app's only
-      network activity. License activation is verified locally on your Mac.</p>
+      <h2>What HotMic asks macOS for</h2>
+      <ul>
+        <li><strong>Microphone</strong>, which macOS requires before it passes
+        on the AirPods mute gesture. HotMic asks only in setup, when you click
+        Continue; see above for what happens to the audio.</li>
+        <li><strong>Accessibility</strong>, which macOS requires before an app
+        can create a virtual device. HotMic uses it only to create the HotMic
+        Headset. It doesn't send keystrokes or clicks, see your screen, or
+        read what you type.</li>
+        <li><strong>Notifications</strong> (optional), to warn you if muting
+        stops working during a call.</li>
+        <li><strong>Automation for Music and Spotify</strong> (optional), only
+        if you turn on "Pause music during meetings" (see below).</li>
+        <li><strong>Open at login</strong> (optional), if you choose it.</li>
+      </ul>
+      <p>HotMic doesn't ask for Input Monitoring, Screen Recording, Camera or
+      Location.</p>
+
+      <h2>The browser extension</h2>
+      <p>The HotMic for Meet &amp; Teams extension runs only on Google Meet
+      and Microsoft Teams pages. It reads whether the page's microphone button
+      is muted and whether a call is in progress, and clicks that button when
+      you mute or unmute in HotMic. It tells the HotMic app on the same Mac,
+      through your browser's native messaging, only that state, which meeting
+      site it's on, its own version and how it was installed, a list of the
+      features it supports, and short status answers for the
+      features below. When you ask, it can bring the meeting tab to the front
+      or open a new Meet test meeting. On Google Meet it can highlight Meet's
+      own buttons to walk you through setup, and it shows a small "HotMic
+      muted Meet" note by the mic button once.</p>
+      <p>On Google Meet it also checks, when a Meet page loads, when a device
+      connects or disconnects, and while you pair, whether Meet can already use the HotMic Headset. It never asks
+      for access to any device, and it keeps and passes on nothing about
+      other devices: only whether the HotMic Headset is allowed and in
+      use.</p>
+      <p>The extension has two settings in its popup, which work with or
+      without the app. With "Ask before closing a meeting tab" on (the
+      default), it checks each click on the meeting page only for whether it
+      was on the meeting's own Leave button, so leaving on purpose isn't
+      questioned; it keeps nothing about the click. With "Join Meet muted"
+      set to Mic only or Mic and camera (it's Off by default), on Google
+      Meet's pre-join screen it reads whether those toggles are on, whether
+      you changed them yourself, and the meeting code in the page address, so
+      it acts once per meeting. That stays in the page's memory and is gone
+      when the tab closes; the only thing it tells the HotMic app is whether
+      turning the mic or camera off didn't take. Both settings are kept in
+      your browser's local storage and are never sent anywhere.</p>
+      <p>The extension makes no network requests. It collects, stores and sends
+      no personal data, page content or meeting details, and it doesn't
+      access audio.</p>
+      <p>So the extension can reach the app, HotMic puts one small file (its
+      helper's connection manifest) in the support folder of each Chromium
+      browser you have: Chrome, Edge, Brave, Arc or Chromium. It doesn't read
+      your browsing data there, and Settings &rarr; Uninstall HotMic &rarr;
+      Remove HotMic's Connections removes the file. HotMic writes it again if
+      you open the app later.</p>
+
+      <h2>Music and Spotify (optional)</h2>
+      <p>If you turn on "Pause music during meetings" in Settings (off by
+      default, part of Pro), HotMic asks macOS for permission to control
+      whichever of Music and Spotify is open; Settings has an Ask button for
+      the other once you open it. When a meeting starts, it asks whichever of those
+      players is already running whether it's playing, and for the ID of the
+      current track (not its name). It pauses a playing player. When the
+      meeting ends, it resumes the player only if the same track is still
+      paused. It never opens a player, reads nothing else from your library,
+      and can't change your library or playlists. What it paused is kept only
+      in memory until the meeting ends. You can turn this off in Settings, or
+      remove the permission in System Settings &rarr; Privacy &amp; Security
+      &rarr; Automation.</p>
+
+      <h2>Updates: the app's only network activity</h2>
+      <p>HotMic checks for new versions with the Sparkle update framework:
+      automatically if you say yes when it asks, and whenever you choose
+      Check for Updates. Like any web request, a check sends your IP
+      address, along with the app version, so the server can answer "is
+      there something newer?". If you install an update, HotMic downloads it
+      from the update server. That is the app's only network activity. Links
+      you click in HotMic open in your browser. License activation is
+      verified locally on your Mac.</p>
 
       <h2>Purchases</h2>
       <p>Purchases are processed by Paddle as merchant of record. When you buy
@@ -50,16 +153,29 @@
       under
       <a href="https://www.paddle.com/legal/privacy" rel="noopener">Paddle's privacy policy</a>.
       We receive from Paddle what is needed to issue your license key, such as
-      your email address and the tier you purchased.</p>
+      your email address and what you bought. A small service we run on
+      Cloudflare creates the key, and Resend, our email provider, emails it
+      to you; both receive your email address only to create and deliver your
+      key. If the email fails to send, your address is written to that
+      service's error log so we can resend it. Your license key contains your email address. When you enter it in
+      HotMic, it is stored and checked on your Mac.</p>
 
       <h2>No analytics, anywhere</h2>
       <p>The app contains no analytics, telemetry, or crash reporting that
       phones home. This website sets no cookies, runs no analytics, and loads
       nothing from third-party servers.</p>
+      <p>HotMic keeps a short list of setup steps on your Mac to help with
+      support, and never sends it anywhere. If you use Copy details or Send
+      details, the text goes only where you paste or send it, and it
+      never includes your email, license key or device names.</p>
 
       <h2>Contact</h2>
-      <p>Questions about this policy: [SUPPORT EMAIL — to be filled in before
-      launch].</p>
+      <p>Questions about this policy:
+      <a href="mailto:support@usehotmic.com">support@usehotmic.com</a>.</p>
+      <p>Duck Duck Grey Duck LLC<br>
+      30 N Gould St, Ste N<br>
+      Sheridan, WY 82801<br>
+      United States</p>
     </div>
   </div>
 </main>
@@ -67,10 +183,18 @@
 <footer class="site-foot">
   <div class="wrap">
     <nav aria-label="Legal">
-      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy policy</a>
       <a href="eula.html">License agreement</a>
     </nav>
-    <p>&copy; 2026 HotMic for Mac</p>
+    <p>HotMic for Mac is not affiliated with, endorsed by, or sponsored by Apple, Google, Microsoft, Spotify, Zoom, or any headset maker. AirPods, Apple Music, FaceTime and macOS are trademarks of Apple Inc.; Google Meet and Chrome are trademarks of Google LLC; Microsoft Teams is a trademark of Microsoft Corporation; Spotify is a trademark of Spotify AB. Other names are trademarks of their respective owners.</p>
+    <p>&copy; 2026 Duck Duck Grey Duck LLC</p>
+    <p class="maker">
+      <span class="maker-label">Built by</span>
+      <picture>
+        <source type="image/webp" srcset="assets/ddgd-logo-360.webp 2x, assets/ddgd-logo-540.webp 3x">
+        <img src="assets/ddgd-logo-360.png" srcset="assets/ddgd-logo-360.png 2x, assets/ddgd-logo-540.png 3x" alt="Duck Duck Grey Duck LLC" width="360" height="151" loading="lazy" decoding="async">
+      </picture>
+    </p>
   </div>
 </footer>
 

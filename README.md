@@ -4,42 +4,51 @@ Static one-pager for HotMic for Mac (`index.html`, `privacy.html`,
 `eula.html`). Plain HTML/CSS, no build step, no external origins — it works
 opened straight from `file://` and hosted on GitHub Pages.
 
-> ## ⚠️ Domain is NOT registered yet
+> ## Domain: registered, not serving yet
 >
-> `CNAME` in this repo points at **usehotmic.com**, which is the
-> *recommended* domain (verified available 2026-09-21) but is **still
-> unregistered**. Availability is not reserved — **register usehotmic.com
-> BEFORE pushing this repo or configuring Pages**. Publishing a CNAME for a
-> domain you don't own invites hijacking, and the domain also becomes the
-> Sparkle `SUFeedURL` baked into every shipped build, so it must be settled
-> first.
+> `CNAME` in this repo points at **usehotmic.com**. The domain is registered
+> (Amazon Registrar, hosted zone in Route 53) but is **not serving yet**: the
+> GitHub Pages DNS records below still have to be added. The domain is also
+> the Sparkle `SUFeedURL` host baked into every shipped build, so don't
+> change it.
 
-## Publishing (left for the owner to run)
+## Publishing
 
-Nothing here has been pushed. When ready:
-
-```sh
-gh repo create hotmic-site --public --source . --push
-```
-
-Note: GitHub Pages on a free account requires a **public** repo.
+Published at github.com/mikaelq/hotmic-site (public; GitHub Pages on a free
+account requires that). Pages deploys `main` from the repo root.
 
 ## GitHub Pages setup
 
-1. Register `usehotmic.com` (and optionally `hotmicformac.com` as a
-   redirect).
-2. Push this repo (command above).
-3. Repo → Settings → Pages → "Deploy from a branch" → branch `main`, folder
-   `/ (root)`.
-4. At your DNS provider, for the apex `usehotmic.com`, add four A records:
+1. `usehotmic.com` is already registered (Amazon Registrar / Route 53).
+   Optionally register `hotmicformac.com` as a redirect.
+2. Pushed; Pages deploys from `main`, root (done).
+4. In the Route 53 hosted zone for `usehotmic.com`, add four A records for
+   the apex:
    - `185.199.108.153`
    - `185.199.109.153`
    - `185.199.110.153`
    - `185.199.111.153`
-5. Add a `CNAME` DNS record for `www` pointing to `<your-github-username>.github.io`.
+5. Add a `CNAME` DNS record for `www` pointing to `mikaelq.github.io`.
 6. Back in Settings → Pages, confirm the custom domain shows `usehotmic.com`
    (the `CNAME` file in this repo pre-fills it) and, once the DNS check
    passes, tick **Enforce HTTPS**.
+
+## Assets
+
+`assets/` holds the brand images, generated from the product repo's
+`Design/Brand/` and `HotMic/AppIcon.icon/` sources plus the Duck Duck Grey
+Duck LLC logo:
+
+- `glyph-56.png`, `glyph-84.png`: header glyph at 2x and 3x (from the app
+  icon's `glyph-dark.png` layer).
+- `favicon.ico`, `favicon-16.png`, `favicon-32.png`, `apple-touch-icon.png`:
+  the glyph on the app icon's `#fbfbfc` tile.
+- `og-image.png` (1200x630): link-preview image. Pages reference it by
+  absolute URL (`https://usehotmic.com/assets/og-image.png`), so previews
+  stay empty until the domain is serving.
+- `ddgd-logo-360/540.{png,webp}`: Duck Duck Grey Duck LLC logo for the
+  footer credit, white background removed. It only works on light
+  backgrounds.
 
 ## Where the appcast will live
 
@@ -60,9 +69,10 @@ Pages site, under `appcast/`:
 - The three buy buttons in `index.html` (`href="#"`) → Paddle.js checkout
   wiring; the live Paddle price IDs are already on the buttons as
   `data-paddle-price-id`.
-- `[SUPPORT EMAIL]` in `privacy.html` and `eula.html`.
-- `eula.html` is a DRAFT (visible banner): bracketed placeholders unfilled,
-  attorney review pending.
+- `eula.html` is a DRAFT (visible banner): `[DATE]` and the governing law /
+  venue (`[JURISDICTION]`, `[VENUE]`, §11.1) are unfilled, attorney review
+  pending. The Licensor is Duck Duck Grey Duck LLC.
+- support@usehotmic.com must receive mail before launch.
 
 ## Rules for this site
 
