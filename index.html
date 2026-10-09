@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HotMic for Mac: mute Google Meet with your AirPods stem</title>
-<meta name="description" content="Press your AirPods stem and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
+<title>HotMic for Mac: mute Google Meet right from your AirPods</title>
+<meta name="description" content="Press your AirPods stem or AirPods Max Digital Crown and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="home.css">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -14,8 +14,8 @@
 <meta name="theme-color" content="#f3f5f7">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HotMic">
-<meta property="og:title" content="HotMic for Mac: mute Google Meet with your AirPods stem">
-<meta property="og:description" content="Press your AirPods stem and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
+<meta property="og:title" content="HotMic for Mac: mute Google Meet right from your AirPods">
+<meta property="og:description" content="Press your AirPods stem or AirPods Max Digital Crown and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
 <meta property="og:url" content="https://usehotmic.com/">
 <link rel="canonical" href="https://usehotmic.com/">
 <meta property="og:image" content="https://usehotmic.com/assets/og-image.png">
@@ -23,8 +23,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The HotMic app icon and wordmark">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HotMic for Mac: mute Google Meet with your AirPods stem">
-<meta name="twitter:description" content="Press your AirPods stem and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
+<meta name="twitter:title" content="HotMic for Mac: mute Google Meet right from your AirPods">
+<meta name="twitter:description" content="Press your AirPods stem or AirPods Max Digital Crown and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
 <meta name="twitter:image" content="https://usehotmic.com/assets/og-image.png">
 <meta name="twitter:image:alt" content="The HotMic app icon and wordmark">
 </head>
@@ -49,8 +49,8 @@
   <div class="wrap hero-grid">
    <div class="hero-copy">
     <p class="eyebrow">A little Mac app. A quieter meeting.</p>
-    <h1><span class="l1">Squeeze your AirPods.</span> <span class="nb">Meet mutes.</span></h1>
-    <p class="sub">Your hands stay off the keyboard. Your mute state stays in sync. Press the stem to mute Google Meet. Press again to talk.</p>
+    <h1><span class="l1">Mute Meet.</span> <span class="nb">Right from<br>your AirPods.</span></h1>
+    <p class="sub">Press your AirPods stem or AirPods Max Digital Crown. Meet’s own mute button changes with you. Press again to talk.</p>
     <div class="cta-row">
         <a class="btn" href="#download" aria-describedby="dl-note">Get HotMic for Mac <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></a>
       <a class="btn quiet" href="#pricing">See pricing</a>
@@ -59,7 +59,7 @@
     <p class="hero-requirements">macOS 15+ · AirPods 3 / 4, AirPods Pro or AirPods Max</p>
    </div>
    <div class="demo-band" id="how">
-    <div class="demo-heading"><span>THE STEM → THE CALL</span><span class="demo-kind">Illustrated demo</span></div>
+    <div class="demo-heading"><span>YOUR AIRPODS → YOUR CALL</span><span class="demo-kind">Illustrated demo</span></div>
     <figure class="demo">
       <input type="checkbox" id="demo-pause" class="vh">
       <label for="demo-pause" class="demo-pause" title="Toggle animation playback"><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z"/></svg><span class="pause-label">Pause demo</span><span class="play-label">Resume demo</span></label>
@@ -68,7 +68,7 @@
         <div class="panel pod-panel">
           <div class="panel-head">
             <span class="sync-dot"><span class="d-live"></span><span class="d-muted"></span></span>
-            <span class="panel-name">01 / Your AirPods</span>
+            <span class="panel-name">01 / <span class="model-earbuds">AirPods</span><span class="model-max">AirPods Max</span></span>
           </div>
           <div class="pod-crop">
             <div class="pod-cam">
@@ -198,6 +198,25 @@
                 </g>
               </svg>
             </div>
+            <svg class="airpods-max" viewBox="0 0 264 300" role="presentation">
+              <defs>
+                <linearGradient id="max-metal" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#858c94"/><stop offset=".35" stop-color="#e5e9ed"/><stop offset=".7" stop-color="#c4cbd1"/><stop offset="1" stop-color="#87909a"/></linearGradient>
+                <linearGradient id="max-cup" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5f7f9"/><stop offset=".5" stop-color="#cbd2d8"/><stop offset="1" stop-color="#9ca5af"/></linearGradient>
+              </defs>
+              <path d="M53 174V107C53 15 211 15 211 107v67" fill="none" stroke="#747d87" stroke-width="18"/>
+              <path d="M53 165V107C53 24 211 24 211 107v58" fill="none" stroke="url(#max-metal)" stroke-width="12"/>
+              <path d="M65 82C85 30 179 30 199 82" fill="none" stroke="#aeb7bf" stroke-width="12"/>
+              <path d="M53 115v65M211 115v65" stroke="#6b747e" stroke-width="7"/>
+              <rect x="30" y="150" width="62" height="112" rx="28" fill="#747d85"/>
+              <rect x="27" y="144" width="56" height="113" rx="26" fill="url(#max-cup)" stroke="#a9b2ba"/>
+              <rect x="172" y="150" width="62" height="112" rx="28" fill="#747d85"/>
+              <rect x="181" y="144" width="56" height="113" rx="26" fill="url(#max-cup)" stroke="#a9b2ba"/>
+              <path d="M39 162v77M193 162v77" stroke="#ffffff" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+              <g class="crown-press"><rect x="206" y="135" width="18" height="9" rx="3" fill="url(#max-metal)" stroke="#7d8791"/><path d="M210 136v6m4-6v6m4-6v6" stroke="#7d8791" stroke-width="1"/></g>
+              <g class="crown-finger"><path d="M200 87v30c0 13 7 21 15 21s15-8 15-21V87" fill="url(#pd-fing)"/><path d="M208 99v17c0 4 14 4 14 0V99" fill="#ffe5ce" opacity=".65"/></g>
+              <circle class="crown-ring" cx="215" cy="140" r="22" fill="none" stroke="#0e8f52" stroke-width="2"/>
+              <text x="132" y="285" text-anchor="middle" fill="#566068" font-size="12" font-family="system-ui">Press the Digital Crown</text>
+            </svg>
           </div>
         </div>
 
@@ -276,7 +295,7 @@
         </div>
 
       </div>
-      <figcaption><span class="demo-caption-live">You’re live. Squeeze to mute.</span><span class="demo-caption-muted">Muted in Meet. Squeeze again to talk.</span></figcaption>
+      <figcaption><span class="demo-caption-live">You’re live. Press to mute.</span><span class="demo-caption-muted">Muted in Meet. Press again to talk.</span></figcaption>
     </figure>
    </div>
   </div>
@@ -338,11 +357,11 @@
 <section class="setup" aria-labelledby="setup-h">
   <div class="wrap">
     <p class="section-kicker">From download to your next call</p>
-    <h2 id="setup-h">One quick setup. Then just squeeze.</h2>
+    <h2 id="setup-h">One quick setup. Then just press.</h2>
     <ol class="setup-steps">
       <li><span class="step-number">01</span><h3>Meet HotMic.</h3><p>Open the Mac app. The setup guide walks you through permissions and a practice press.</p></li>
       <li><span class="step-number">02</span><h3>Connect your browser.</h3><p>Add the HotMic extension to Chrome, Edge, Brave or Arc to sync Meet’s mute button.</p></li>
-      <li><span class="step-number">03</span><h3>Make it muscle memory.</h3><p>Try it in a private Meet call. Squeeze to mute; squeeze again when you’re ready to speak.</p></li>
+      <li><span class="step-number">03</span><h3>Make it muscle memory.</h3><p>Try it in a private Meet call. Press to mute; press again when you’re ready to speak.</p></li>
     </ol>
   </div>
 </section>
@@ -402,6 +421,7 @@
       <details><summary>Which AirPods and Macs work?</summary><p>You’ll need macOS 15 or later and AirPods (3rd generation or later), AirPods Pro or AirPods Max. Squeeze the stem on AirPods and AirPods Pro; press the Digital Crown on AirPods Max. If you’re on macOS 27, check compatibility during the trial.</p></details>
       <details><summary>Do I need the browser extension?</summary><p>Yes, to sync Google Meet’s own mute button through the browser bridge. The setup guide helps you connect it in Chrome, Edge, Brave or Arc. Without that connection, HotMic can use device-level mute instead.</p></details>
       <details><summary>What about Zoom, FaceTime and Teams?</summary><p>Zoom 6.4+, FaceTime and the native Teams app already support the stem gesture, so HotMic leaves them alone. Teams on the web is in beta. In other apps, HotMic can mute your Mac’s mics, but the app’s mute indicator may not change.</p></details>
+      <details><summary>What about Beats?</summary><p>Apple documents call-mute controls on Beats Studio Pro, Solo 4, Solo Buds, Studio Buds +, Fit Pro and Powerbeats Pro 2. These native controls do not yet establish compatibility with HotMic’s Meet bridge: we haven’t verified Beats with HotMic on hardware. <a href="https://support.apple.com/guide/beats/customize-beats-controls-dev9eeff2d7b/web">Apple’s Beats controls guide.</a></p></details>
       <details><summary>What happens after 14 days?</summary><p>Device mute, the mute shortcut, Go to meeting and Join Meet muted stay free. Pro adds Meet mute sync, Stealth Mute and push-to-talk, with a one-time purchase.</p></details>
       <details><summary>Does HotMic record my conversations?</summary><p>No. Your audio is never recorded, stored or sent. HotMic runs on your Mac, with no analytics or trackers. <a href="privacy.html">Read the privacy policy.</a></p></details>
     </div>

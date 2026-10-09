@@ -92,11 +92,17 @@ in a browser. No package install or build is required. `styles.css` contains
 the shared site styling; `home.css` contains the homepage layout and demo
 refinements and is loaded only by `index.html`.
 
-The illustrative demo uses a ten-second CSS timeline: squeeze, signal, Meet
-mute, hold, second squeeze, Meet unmute. The caption follows the same state.
+The illustrative demo uses a ten-second CSS timeline: AirPods stem squeeze,
+signal, Meet mute, hold, AirPods Max Digital Crown press, Meet unmute. The caption follows the same state.
 The playback checkbox pauses the stage, pseudo-elements and caption together.
 With reduced motion, the demo shows a consistent static muted state instead.
 When adjusting timing, check both state holds, the loop boundary, pause/resume,
 and reduced motion. Check layouts at 320, 375, 768, 1024 and 1440 pixels and
 confirm the legal and guide pages still render. FAQs use native `details`
 controls, without scripts or external dependencies.
+
+Beats research: Apple’s model-specific user guides document call-mute
+controls for Studio Pro, Solo 4, Solo Buds, Studio Buds +, Fit Pro and
+Powerbeats Pro 2. The homepage FAQ links to Apple’s controls guide and
+separates that native capability from hardware validation with HotMic.
+Do not present this as a verified HotMic support matrix.
