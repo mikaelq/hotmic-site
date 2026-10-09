@@ -139,17 +139,18 @@
       remove the permission in System Settings &rarr; Privacy &amp; Security
       &rarr; Automation.</p>
 
-      <h2>Updates: the app's only network activity</h2>
+      <h2>Updates and license checks: the app's only network activity</h2>
       <p>HotMic checks for new versions with the Sparkle update framework:
       automatically if you say yes when it asks, and whenever you choose
       Check for Updates. Like any web request, a check sends your IP
       address, along with the app version, so the server can answer "is
       there something newer?". If you install an update, HotMic downloads it
-      from the update server. Right after each check, HotMic also downloads
-      a short public list of revoked license keys from the same server and
-      compares it with your key on your Mac. That request sends nothing
-      about your key or you beyond your IP address. That is the app's only
-      network activity. This website, the update server and the HotMic
+      from the update server. If you've entered a license key, HotMic also
+      downloads a short public list of revoked license keys from the same
+      server about once a day and compares it with your key on your Mac.
+      That request sends nothing about your key or you beyond your IP
+      address, and HotMic makes it only while a license key is entered.
+      These are the app's only network activity. This website, the update server and the HotMic
       download are hosted by GitHub (GitHub Pages and GitHub Releases), so
       GitHub receives your IP address when you visit, check for updates or
       download, and handles it under
