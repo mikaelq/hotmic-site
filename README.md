@@ -68,10 +68,10 @@ Pages site, under `appcast/`:
 
 ## Placeholders still to fill before launch
 
-- Both download buttons in `index.html` (`href="#"`) → the GitHub Releases
-  DMG URL.
-- The three buy buttons in `index.html` (`href="#"`) → Paddle.js checkout
-  wiring; the live Paddle price IDs are already on the buttons as
+- The homepage links to the GitHub Releases listing. Replace the final
+  releases link with a verified DMG URL when a public build is available.
+- The three pricing cards explicitly show "Checkout coming soon". Connect
+  Paddle.js checkout when ready; the live price IDs are retained as
   `data-paddle-price-id`.
 - `eula.html` is a DRAFT (visible banner): `[DATE]` and the governing law /
   venue (`[JURISDICTION]`, `[VENUE]`, §11.1) are unfilled, attorney review
@@ -84,3 +84,19 @@ No analytics, no cookies of our own, and no external scripts, fonts, or
 other third-party origins, except Paddle.js for the overlay checkout
 (and the cookies Paddle sets for it). The privacy page and the home
 page privacy band say exactly this; keep them true.
+
+## Local development
+
+Serve the repository with `python3 -m http.server 8000` and check the pages
+in a browser. No package install or build is required. `styles.css` contains
+the shared site styling; `home.css` contains the homepage layout and demo
+refinements and is loaded only by `index.html`.
+
+The illustrative demo uses a ten-second CSS timeline: squeeze, signal, Meet
+mute, hold, second squeeze, Meet unmute. The caption follows the same state.
+The playback checkbox pauses the stage, pseudo-elements and caption together.
+With reduced motion, the demo shows a consistent static muted state instead.
+When adjusting timing, check both state holds, the loop boundary, pause/resume,
+and reduced motion. Check layouts at 320, 375, 768, 1024 and 1440 pixels and
+confirm the legal and guide pages still render. FAQs use native `details`
+controls, without scripts or external dependencies.

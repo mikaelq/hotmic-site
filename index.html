@@ -6,6 +6,7 @@
 <title>HotMic for Mac: mute Google Meet with your AirPods stem</title>
 <meta name="description" content="Press your AirPods stem and Google Meet's own mute button flips. In most other apps, HotMic mutes your Mac's microphones instead.">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="home.css">
 <link rel="icon" href="assets/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
@@ -38,8 +39,7 @@
       <a href="#pricing">Pricing</a>
       <a href="#privacy">Privacy</a>
     </nav>
-    <!-- TODO: replace href with the GitHub Releases download URL (dmg) before launch -->
-    <a class="btn head-cta" href="#">Download</a>
+    <a class="btn head-cta" href="#download">Get HotMic</a>
   </div>
 </header>
 
@@ -48,30 +48,31 @@
 <section class="m-hero">
   <div class="wrap hero-grid">
    <div class="hero-copy">
-    <p class="eyebrow">The hot&#8209;mic fix for Google Meet</p>
+    <p class="eyebrow">A little Mac app. A quieter meeting.</p>
     <h1><span class="l1">Squeeze your AirPods.</span> <span class="nb">Meet mutes.</span></h1>
-    <p class="sub">Press the stem and Google Meet's own mute button flips. You and the call stay in&nbsp;sync.</p>
+    <p class="sub">Your hands stay off the keyboard. Your mute state stays in sync. Press the stem to mute Google Meet. Press again to talk.</p>
     <div class="cta-row">
-      <!-- TODO: replace href with the GitHub Releases download URL (dmg) before launch -->
-      <a class="btn" href="#" aria-describedby="dl-note">Download for Mac</a>
+        <a class="btn" href="#download" aria-describedby="dl-note">Get HotMic for Mac <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></a>
       <a class="btn quiet" href="#pricing">See pricing</a>
     </div>
-    <p class="cta-note" id="dl-note">Free for 14 days from your first meeting. No card. No&nbsp;account.</p>
+    <p class="cta-note" id="dl-note">14 days of Pro from your first meeting. No card. No account.</p>
+    <p class="hero-requirements">For macOS 15+ · AirPods 3, AirPods 4 or AirPods Pro</p>
    </div>
    <div class="demo-band" id="how">
+    <div class="demo-heading"><span>THE STEM → THE CALL</span><span class="demo-kind">Illustrated demo</span></div>
     <figure class="demo">
       <input type="checkbox" id="demo-pause" class="vh">
-      <label for="demo-pause" class="demo-pause" title="Pause animation"><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z"/></svg><span class="vh">Pause animation</span></label>
+      <label for="demo-pause" class="demo-pause" title="Toggle animation playback"><svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="4" y="3" width="2.6" height="10" rx="1"/><rect x="9.4" y="3" width="2.6" height="10" rx="1"/></svg><svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z"/></svg><span class="pause-label">Pause demo</span><span class="play-label">Resume demo</span></label>
       <div class="demo-stage" aria-hidden="true">
 
         <div class="panel pod-panel">
           <div class="panel-head">
             <span class="sync-dot"><span class="d-live"></span><span class="d-muted"></span></span>
-            <span class="panel-name">Your AirPods</span>
+            <span class="panel-name">01 / Your AirPods</span>
           </div>
           <div class="pod-crop">
             <div class="pod-cam">
-              <svg class="airpod" viewBox="44 16 134 252" role="presentation">
+              <svg class="airpod" viewBox="0 0 264 300" role="presentation">
                 <defs>
                   <radialGradient id="pd-body" cx="0.36" cy="0.24" r="1.05">
                     <stop offset="0" stop-color="#ffffff"/>
@@ -218,7 +219,7 @@
         <div class="panel meet-panel">
           <div class="panel-head">
             <span class="sync-dot"><span class="d-live"></span><span class="d-muted"></span></span>
-            <span class="panel-name">Google Meet</span>
+            <span class="panel-name">02 / Google Meet</span>
           </div>
           <div class="meet-tile">
             <svg class="avatar" viewBox="0 0 48 48" role="presentation">
@@ -275,7 +276,7 @@
         </div>
 
       </div>
-      <figcaption>One squeeze. Meet's own button flips.</figcaption>
+      <figcaption><span class="demo-caption-live">You’re live. Squeeze to mute.</span><span class="demo-caption-muted">Muted in Meet. Squeeze again to talk.</span></figcaption>
     </figure>
    </div>
   </div>
@@ -283,7 +284,9 @@
 
 <section class="m-truth" aria-labelledby="truth-h">
   <div class="wrap">
+    <p class="section-kicker">A small gesture. A real difference.</p>
     <h2 id="truth-h">Muted should look muted.</h2>
+    <p class="lede">HotMic changes Meet’s own mute button, so everyone sees the same state.</p>
     <div class="vs">
       <div class="vs-card is-bad">
         <h3>Device-level mute</h3>
@@ -305,6 +308,7 @@
 
 <section class="m-tiles" aria-labelledby="tiles-h">
   <div class="wrap">
+    <p class="section-kicker">Less reaching. More listening.</p>
     <h2 id="tiles-h">Built for live calls.</h2>
     <ul class="tiles">
       <li>
@@ -315,19 +319,31 @@
       <li>
         <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 16s5-8 13-8 13 8 13 8-5 8-13 8S3 16 3 16z"/><circle cx="16" cy="16" r="3.5"/><path d="M5 5l22 22"/></svg>
         <h3>Stealth Mute <span class="tag">Pro</span></h3>
-        <p>Mics off. Meet still shows you&nbsp;live.</p>
+        <p>Temporarily silence your Mac’s mics without changing Meet’s mute indicator.</p>
       </li>
       <li>
         <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="9" width="24" height="15" rx="3.5"/><path d="M9 19h14"/></svg>
         <h3>Push-to-talk <span class="tag">Pro</span></h3>
-        <p>Hold a key to&nbsp;talk.</p>
+        <p>Hold your shortcut to talk. Release it to mute again.</p>
       </li>
       <li>
         <svg class="ico" viewBox="0 0 32 32" aria-hidden="true"><rect x="12" y="4" width="8" height="15" rx="4"/><path d="M7 15a9 9 0 0 0 18 0M16 24v4M5 5l22 22"/></svg>
         <h3>Everywhere else <span class="tag free">Free</span></h3>
-        <p>Mutes your Mac's mics in other&nbsp;apps.</p>
+        <p>Device-level mute for other apps. Their on-screen mute button may not change.</p>
       </li>
     </ul>
+  </div>
+</section>
+
+<section class="setup" aria-labelledby="setup-h">
+  <div class="wrap">
+    <p class="section-kicker">From download to your next call</p>
+    <h2 id="setup-h">One quick setup. Then just squeeze.</h2>
+    <ol class="setup-steps">
+      <li><span class="step-number">01</span><h3>Meet HotMic.</h3><p>Open the Mac app. The setup guide walks you through permissions and a practice press.</p></li>
+      <li><span class="step-number">02</span><h3>Connect your browser.</h3><p>Add the HotMic extension to Chrome, Edge, Brave or Arc to sync Meet’s mute button.</p></li>
+      <li><span class="step-number">03</span><h3>Make it muscle memory.</h3><p>Try it in a private Meet call. Squeeze to mute; squeeze again when you’re ready to speak.</p></li>
+    </ol>
   </div>
 </section>
 
@@ -336,28 +352,28 @@
     <h2>Pay once. No subscription.</h2>
     <p class="lede">Everything free for 14 days. Then the basics stay free, or buy Pro&nbsp;once.</p>
     <p class="free-line"><span class="tag free">Free</span> Device mute, mute shortcut, Go to meeting, Join Meet&nbsp;muted.</p>
-    <!-- Buy buttons are placeholders: Paddle.js checkout wiring comes later.
-         The data-paddle-price-id attributes below carry the LIVE Paddle price IDs. -->
+    <!-- Checkout is pending. Retain live Paddle price IDs for future wiring. -->
     <ul class="plans">
       <li class="plan is-main">
         <h3><span class="tag">Pro</span> Personal</h3>
         <p class="price">$19</p>
         <p class="who">One person, all their Macs.</p>
-        <a class="btn" href="#" data-paddle-price-id="pri_01m32qxtfpzraze0hqzb26wvke">Buy Personal</a>
+        <span class="btn checkout-pending" data-paddle-price-id="pri_01m32qxtfpzraze0hqzb26wvke">Checkout coming soon</span>
       </li>
       <li class="plan">
         <h3><span class="tag">Pro</span> Team 5-pack</h3>
         <p class="price">$79</p>
         <p class="who">Five seats, one key.</p>
-        <a class="btn quiet" href="#" data-paddle-price-id="pri_01m32qxtnr5wmz0vpy3ga212ef">Buy 5-pack</a>
+        <span class="btn quiet checkout-pending" data-paddle-price-id="pri_01m32qxtnr5wmz0vpy3ga212ef">Checkout coming soon</span>
       </li>
       <li class="plan">
         <h3><span class="tag">Pro</span> Team 20 seats</h3>
         <p class="price">$249</p>
         <p class="who">Twenty seats, one key.</p>
-        <a class="btn quiet" href="#" data-paddle-price-id="pri_01m32qxtwzv6b7e3d7evcg1w05">Buy 20 seats</a>
+        <span class="btn quiet checkout-pending" data-paddle-price-id="pri_01m32qxtwzv6b7e3d7evcg1w05">Checkout coming soon</span>
       </li>
     </ul>
+    <p class="checkout-note">Pro checkout is not connected yet. One-time prices are shown above.</p>
     <div class="guarantee" id="refunds">
       <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v8c0 7-4.7 12-11 14C9.7 27 5 22 5 15V7z"/><path d="M11 16l3.5 3.5L21 13"/></svg>
       <p><strong>30-day money-back guarantee.</strong> Not happy? Email <a href="mailto:support@usehotmic.com">support@usehotmic.com</a> within 30&nbsp;days for a full refund. No questions&nbsp;asked.</p>
@@ -378,13 +394,28 @@
   </div>
 </div>
 
+<section class="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <p class="section-kicker">Before your next meeting</p>
+    <h2 id="faq-h">A few good questions.</h2>
+    <div class="faq-list">
+      <details><summary>Which AirPods and Macs work?</summary><p>You’ll need macOS 15 or later and AirPods (3rd generation or later) or AirPods Pro. If you’re on macOS 27, check compatibility during the trial.</p></details>
+      <details><summary>Do I need the browser extension?</summary><p>Yes, to sync Google Meet’s own mute button through the browser bridge. The setup guide helps you connect it in Chrome, Edge, Brave or Arc. Without that connection, HotMic can use device-level mute instead.</p></details>
+      <details><summary>What about Zoom, FaceTime and Teams?</summary><p>Zoom 6.4+, FaceTime and the native Teams app already support the stem gesture, so HotMic leaves them alone. Teams on the web is in beta. In other apps, HotMic can mute your Mac’s mics, but the app’s mute indicator may not change.</p></details>
+      <details><summary>What happens after 14 days?</summary><p>Device mute, the mute shortcut, Go to meeting and Join Meet muted stay free. Pro adds Meet mute sync, Stealth Mute and push-to-talk, with a one-time purchase.</p></details>
+      <details><summary>Does HotMic record my conversations?</summary><p>No. Your audio is never recorded, stored or sent. HotMic runs on your Mac, with no analytics or trackers. <a href="privacy.html">Read the privacy policy.</a></p></details>
+    </div>
+  </div>
+</section>
+
 <section id="download">
   <div class="wrap">
-    <h2>Try it free for 14&nbsp;days.</h2>
+    <p class="section-kicker">Your next call, a little calmer.</p>
+    <h2>Less hot mic.<br>More peace of mind.</h2>
     <div class="cta-row">
-      <!-- TODO: replace href with the GitHub Releases download URL (dmg) before launch -->
-      <a class="btn" href="#">Download for Mac</a>
+        <a class="btn" href="https://github.com/mikaelq/hotmic/releases">Check Mac releases <svg class="cta-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 13 3M4 3h9v9"/></svg></a>
     </div>
+    <p class="cta-note">Download availability is listed on GitHub Releases. Pro checkout is coming soon.</p>
     <p class="fine">macOS 15 or later. AirPods (3rd gen or later) or AirPods&nbsp;Pro. Zoom 6.4+, FaceTime and the Teams app handle the stem&nbsp;themselves. On macOS&nbsp;27? Test it during the&nbsp;trial.</p>
   </div>
 </section>
