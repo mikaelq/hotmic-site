@@ -4,13 +4,12 @@ Static site for HotMic for Mac (`index.html`, `privacy.html`, `eula.html`,
 `google-meet-airpods.html`). Plain HTML/CSS, no build step, no external
 origins except Paddle.js for checkout. It works opened straight from `file://` and hosted on GitHub Pages.
 
-> ## Domain: registered, not serving yet
+> ## Domain: live
 >
-> `CNAME` in this repo points at **usehotmic.com**. The domain is registered
-> (Amazon Registrar, hosted zone in Route 53) but is **not serving yet**: the
-> GitHub Pages DNS records below still have to be added. The domain is also
-> the planned Sparkle `SUFeedURL` host (see "Where the appcast will live").
-> Once a build ships with it, don't change it.
+> `CNAME` points at **usehotmic.com**, served by GitHub Pages with HTTPS
+> enforced (live since 2026-10-09). The domain is also the Sparkle `SUFeedURL`
+> host (see "Where the appcast will live"). Once a build ships with it, don't
+> change it.
 
 ## Publishing
 
