@@ -2,7 +2,7 @@
 
 Static site for HotMic for Mac (`index.html`, `privacy.html`, `eula.html`,
 `google-meet-airpods.html`). Plain HTML/CSS, no build step, no external
-origins. It works opened straight from `file://` and hosted on GitHub Pages.
+origins except Paddle.js for checkout. It works opened straight from `file://` and hosted on GitHub Pages.
 
 > ## Domain: registered, not serving yet
 >
@@ -76,5 +76,7 @@ Pages site, under `appcast/`:
 
 ## Rules for this site
 
-No analytics, no cookies, no external scripts, fonts, or any other
-third-party origins. The privacy page says so; keep it true.
+No analytics, no cookies of our own, and no external scripts, fonts, or
+other third-party origins, except Paddle.js for the overlay checkout
+(and the cookies Paddle sets for it). The privacy page and the home
+page privacy band say exactly this; keep them true.
