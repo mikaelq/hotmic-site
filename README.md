@@ -68,8 +68,9 @@ Pages site, under `appcast/`:
 
 ## Placeholders still to fill before launch
 
-- The homepage links to the GitHub Releases listing. Replace the final
-  releases link with a verified DMG URL when a public build is available.
+- Download CTAs currently state "Coming soon" and point to the homepage’s
+  availability notice. Replace the final static download notice with a
+  verified DMG link and update CTA copy when a public build is available.
 - The three pricing cards explicitly show "Checkout coming soon". Connect
   Paddle.js checkout when ready; the live price IDs are retained as
   `data-paddle-price-id`.
