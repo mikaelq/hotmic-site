@@ -61,6 +61,11 @@ Pages site, under `appcast/`:
 - `https://usehotmic.com/appcast/HotMic-<version>.zip`: the update archives
   referenced by the appcast (`Scripts/release.sh` in the product repo emits
   `dist/appcast.xml` + zips; copy them into `appcast/` here).
+- `https://usehotmic.com/appcast/revoked-keys.txt`: the signed revoked-key
+  list the app downloads after each update check. Maintained with
+  `LicenseWorker/scripts/revoke-key.js` in the product repo; publish it
+  whenever you revoke a key (refunds, leaked keys). No file is fine until
+  the first revocation.
 
 ## Placeholders still to fill before launch
 
