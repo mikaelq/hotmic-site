@@ -2242,3 +2242,22 @@ kbd {
   .guide .g-fix h2 { font-size: 1.5rem; }
   .guide .g-fix-cta .btn { width: 100%; text-align: center; }
 }
+
+/* pricing: the money-back guarantee, stated plainly under the plans */
+.mini .guarantee {
+  display: flex; align-items: center; gap: 14px;
+  max-width: 640px; margin: 28px auto 18px; padding: 16px 22px;
+  background: var(--card); border: 1px solid rgba(14, 143, 82, 0.35); border-radius: 14px;
+  text-align: left;
+}
+.mini .guarantee svg {
+  flex: none; width: 30px; height: 30px;
+  fill: none; stroke: var(--live-ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.mini .guarantee p { margin: 0; font-size: 0.98rem; line-height: 1.5; text-wrap: pretty; }
+.mini .guarantee strong { color: var(--ink); }
+.mini .guarantee a { text-underline-offset: 3px; }
+@media (max-width: 480px) {
+  .mini .guarantee { align-items: flex-start; padding: 14px 16px; gap: 12px; }
+  .mini .guarantee svg { width: 26px; height: 26px; margin-top: 2px; }
+}
